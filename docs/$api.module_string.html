@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Api+Plus string</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.yeti.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Api+Plus</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="$api.html">$api</a></li><li><a href="$plus.html">$plus</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="$api.module_color.html">$api.color</a></li><li><a href="$api.module_img.html">$api.img</a></li><li><a href="$api.module_linq.html">$api.linq</a></li><li><a href="$api.module_math.html">$api.math</a></li><li><a href="$api.module_money.html">$api.money</a></li><li><a href="$api.module_os.html">$api.os</a></li><li><a href="$api.module_qs.html">$api.qs</a></li><li><a href="$api.module_storage.html">$api.storage</a></li><li><a href="$api.module_string.html">$api.string</a></li><li><a href="$api.module_type.html">$api.type</a></li><li><a href="$plus.module_back.html">$plus.back</a></li><li><a href="$plus.module_clip.html">$plus.clip</a></li><li><a href="$plus.module_img.html">$plus.img</a></li><li><a href="$plus.module_msg.html">$plus.msg</a></li><li><a href="$plus.module_ui.html">$plus.ui</a></li><li><a href="$plus.module_win.html">$plus.win</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			﻿
+
+	<h1 class="page-title">string</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p><b>字符串验证(Validators)和清理转换(Sanitizers)的库，</b>引用自<a href="https://github.com/chriso/validator.js">validator.js</a>，并进行了扩展<br/></p>
+<h3>[doc] Validators</h3>
+<p>Here is a list of the validators currently available.</p>
+<table>
+<thead>
+<tr>
+<th>Validator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em><strong>contains(str, seed)</strong></em></td>
+<td>check if the string contains the seed.</td>
+</tr>
+<tr>
+<td><strong>equals(str, comparison)</strong></td>
+<td>check if the string matches the comparison.</td>
+</tr>
+<tr>
+<td><strong>isAfter(str [, date])</strong></td>
+<td>check if the string is a date that's after the specified date (defaults to now).</td>
+</tr>
+<tr>
+<td><strong>isAlpha(str [, locale])</strong></td>
+<td>check if the string contains only letters (a-zA-Z).<br/><br/>Locale is one of <code>['ar', * 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', * 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', * 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', * 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']</code>) and defaults to <code>en-US</code>.</td>
+</tr>
+<tr>
+<td><strong>isAlphanumeric(str [, locale])</strong></td>
+<td>check if the string contains only letters and numbers.<br/><br/>Locale is one of <code>* ['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', * 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', * 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', * 'sk-SK', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']</code>) and defaults to <code>en-US</code>.</td>
+</tr>
+<tr>
+<td><strong>isAscii(str)</strong></td>
+<td>check if the string contains ASCII chars only.</td>
+</tr>
+<tr>
+<td><strong>isBase64(str)</strong></td>
+<td>check if a string is base64 encoded.</td>
+</tr>
+<tr>
+<td><strong>isBefore(str [, date])</strong></td>
+<td>check if the string is a date that's before the specified date.</td>
+</tr>
+<tr>
+<td><strong>isBoolean(str)</strong></td>
+<td>check if a string is a boolean.</td>
+</tr>
+<tr>
+<td><strong>isByteLength(str [, options])</strong></td>
+<td>check if the string's length (in UTF-8 bytes) falls in a  * range.<br/><br/><code>options</code> is an object which defaults to <code>{min:0, max: undefined}</code>.</td>
+</tr>
+<tr>
+<td><strong>isCreditCard(str)</strong></td>
+<td>check if the string is a credit card.</td>
+</tr>
+<tr>
+<td><strong>isCurrency(str [, options])</strong></td>
+<td>check if the string is a valid currency amount.<br/><br/><code>options</code> is an object  * which defaults to <code>{symbol: '$', require_symbol: false, allow_space_after_symbol: false, symbol_after_digits: false, * allow_negatives: true, parens_for_negatives: false, negative_sign_before_digits: false, negative_sign_after_digits: false, * allow_negative_sign_placeholder: false, thousands_separator: ',', decimal_separator: '.', allow_decimal: true, * require_decimal: false, digits_after_decimal: [2], allow_space_after_digits: false}</code>.<br/><strong>Note:</strong> The array  * <code>digits_after_decimal</code> is filled with the exact number of digits allowd not a range, for example a range 1 to 3 will be given  * as [1, 2, 3].</td>
+</tr>
+<tr>
+<td><strong>isDataURI(str)</strong></td>
+<td>check if the string is a [data uri format] * (https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs).</td>
+</tr>
+<tr>
+<td><strong>isDecimal(str [, options])</strong></td>
+<td>check if the string represents a decimal number, such as 0.1, .3, 1.1, 1.00003,  * 4.0, etc.<br/><br/><code>options</code> is an object which defaults to <code>{force_decimal: false, decimal_digits: '1,', locale: 'en-US'} *</code><br/><br/><code>locale</code> determine the decimal separator and is one of <code>['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', * 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', * 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', * 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']</code>.<br/><strong>Note:</strong>  * <code>decimal_digits</code> is given as a range like '1,3', a specific value like '3' or min like '1,'.</td>
+</tr>
+<tr>
+<td><strong>isDivisibleBy(str, number)</strong></td>
+<td>check if the string is a number that's divisible by another.</td>
+</tr>
+<tr>
+<td><strong>isEmail(str [, options])</strong></td>
+<td>check if the string is an email.<br/><br/><code>options</code> is an object which defaults to <code>* { allow_display_name: false, require_display_name: false, allow_utf8_local_part: true, require_tld: true }</code>. If  * <code>allow_display_name</code> is set to true, the validator will also match <code>Display Name &lt;email-address&gt;</code>. If <code>require_display_name</code>  * is set to true, the validator will reject strings without the format <code>Display Name &lt;email-address&gt;</code>. If  * <code>allow_utf8_local_part</code> is set to false, the validator will not allow any non-English UTF8 character in email address' local  * part. If <code>require_tld</code> is set to false, e-mail addresses without having TLD in their domain will also be matched.</td>
+</tr>
+<tr>
+<td><strong>isEmpty(str)</strong></td>
+<td>check if the string has a length of zero.</td>
+</tr>
+<tr>
+<td><strong>isFQDN(str [, options])</strong></td>
+<td>check if the string is a fully qualified domain name (e.g. domain.com) * .<br/><br/><code>options</code> is an object which defaults to <code>{ require_tld: true, allow_underscores: false, allow_trailing_dot: false } *</code>.</td>
+</tr>
+<tr>
+<td><strong>isFloat(str [, options])</strong></td>
+<td>check if the string is a float.<br/><br/><code>options</code> is an object which can contain  * the keys <code>min</code>, <code>max</code>, <code>gt</code>, and/or <code>lt</code> to validate the float is within boundaries (e.g. <code>{ min: 7.22, max: 9.55 }</code>) it also  * has <code>locale</code> as an option.<br/><br/><code>min</code> and <code>max</code> are equivalent to 'greater or equal' and 'less or equal', respectively  * while <code>gt</code> and <code>lt</code> are their strict counterparts.<br/><br/><code>locale</code> determine the decimal separator and is one of <code>['ar', * 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', * 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', * 'en-ZM', 'es-ES', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sr-RS', * 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']</code>.</td>
+</tr>
+<tr>
+<td><strong>isFullWidth(str)</strong></td>
+<td>check if the string contains any full-width chars.</td>
+</tr>
+<tr>
+<td><strong>isHalfWidth(str)</strong></td>
+<td>check if the string contains any half-width chars.</td>
+</tr>
+<tr>
+<td><strong>isHash(str, algorithm)</strong></td>
+<td>check if the string is a hash of type algorithm.<br/><br/>Algorithm is one of <code>* ['md4', 'md5', 'sha1', 'sha256', 'sha384', 'sha512', 'ripemd128', 'ripemd160', 'tiger128', 'tiger160', 'tiger192', 'crc32', * 'crc32b']</code></td>
+</tr>
+<tr>
+<td><strong>isHexColor(str)</strong></td>
+<td>check if the string is a hexadecimal color.</td>
+</tr>
+<tr>
+<td><strong>isHexadecimal(str)</strong></td>
+<td>check if the string is a hexadecimal number.</td>
+</tr>
+<tr>
+<td><strong>isIP(str [, version])</strong></td>
+<td>check if the string is an IP (version 4 or 6).</td>
+</tr>
+<tr>
+<td><strong>isISBN(str [, version])</strong></td>
+<td>check if the string is an ISBN (version 10 or 13).</td>
+</tr>
+<tr>
+<td><strong>isISSN(str [, options])</strong></td>
+<td>check if the string is an [ISSN] * (https://en.wikipedia.org/wiki/International_Standard_Serial_Number).<br/><br/><code>options</code> is an object which defaults to <code>{ * case_sensitive: false, require_hyphen: false }</code>. If <code>case_sensitive</code> is true, ISSNs with a lowercase <code>'x'</code> as the check digit  * are rejected.</td>
+</tr>
+<tr>
+<td><strong>isISIN(str)</strong></td>
+<td>check if the string is an [ISIN][ISIN] (stock/security identifier).</td>
+</tr>
+<tr>
+<td><strong>isISO8601(str)</strong></td>
+<td>check if the string is a valid <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>  * date.</td>
+</tr>
+<tr>
+<td><strong>isRFC3339(str)</strong></td>
+<td>check if the string is a valid <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> date.</td>
+</tr>
+<tr>
+<td><strong>isISO31661Alpha2(str)</strong></td>
+<td>check if the string is a valid [ISO 3166-1 alpha-2] * (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) officially assigned country code.</td>
+</tr>
+<tr>
+<td><strong>isISO31661Alpha3(str)</strong></td>
+<td>check if the string is a valid [ISO 3166-1 alpha-3] * (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) officially assigned country code.</td>
+</tr>
+<tr>
+<td><strong>isISRC(str)</strong></td>
+<td>check if the string is a [ISRC] * (https://en.wikipedia.org/wiki/International_Standard_Recording_Code).</td>
+</tr>
+<tr>
+<td><strong>isIn(str, values)</strong></td>
+<td>check if the string is in a array of allowed values.</td>
+</tr>
+<tr>
+<td><strong>isInt(str [, options])</strong></td>
+<td>check if the string is an integer.<br/><br/><code>options</code> is an object which can contain  * the keys <code>min</code> and/or <code>max</code> to check the integer is within boundaries (e.g. <code>{ min: 10, max: 99 }</code>). <code>options</code> can also  * contain the key <code>allow_leading_zeroes</code>, which when set to false will disallow integer values with leading zeroes (e.g. <code>{ * allow_leading_zeroes: false }</code>). Finally, <code>options</code> can contain the keys <code>gt</code> and/or <code>lt</code> which will enforce integers being  * greater than or less than, respectively, the value provided (e.g. <code>{gt: 1, lt: 4}</code> for a number between 1 and 4).</td>
+</tr>
+<tr>
+<td><strong>isJSON(str)</strong></td>
+<td>check if the string is valid JSON (note: uses JSON.parse).</td>
+</tr>
+<tr>
+<td><strong>isLatLong(str)</strong></td>
+<td>check if the string is a valid latitude-longitude coordinate in the format <code>lat, * long</code> or <code>lat, long</code>.</td>
+</tr>
+<tr>
+<td><strong>isLength(str [, options])</strong></td>
+<td>check if the string's length falls in a range.<br/><br/><code>options</code> is an object  * which defaults to <code>{min:0, max: undefined}</code>. Note: this function takes into account surrogate pairs.</td>
+</tr>
+<tr>
+<td><strong>isLowercase(str)</strong></td>
+<td>check if the string is lowercase.</td>
+</tr>
+<tr>
+<td><strong>isMACAddress(str)</strong></td>
+<td>check if the string is a MAC address.</td>
+</tr>
+<tr>
+<td><strong>isMD5(str)</strong></td>
+<td>check if the string is a MD5 hash.</td>
+</tr>
+<tr>
+<td><strong>isMimeType(str)</strong></td>
+<td>check if the string matches to a valid [MIME type] * (https://en.wikipedia.org/wiki/Media_type) format</td>
+</tr>
+<tr>
+<td><strong>isMobilePhone(str, locale [, options])</strong></td>
+<td>check if the string is a mobile phone number,<br/><br/>(locale is either  * an array of locales (e.g <code>['sk-SK', 'sr-RS']</code>) OR one of <code>['ar-AE', 'ar-DZ', 'ar-EG', 'ar-JO', 'ar-SA', 'ar-SY', 'ar-TN', * 'be-BY', 'bg-BG', 'cs-CZ', 'de-DE', 'da-DK', 'el-GR', 'en-AU', 'en-CA', 'en-GB', 'en-HK', 'en-IN', 'en-KE', 'en-NG', 'en-NZ', * 'en-RW', 'en-SG', 'en-UG', 'en-US', 'en-TZ', 'en-ZA', 'en-ZM', 'en-PK', 'es-ES', 'et-EE', 'fa-IR', 'fi-FI', 'fr-FR', 'he-IL', * 'hu-HU', 'it-IT', 'ja-JP', 'kk-KZ', 'ko-KR', 'lt-LT', 'ms-MY', 'nb-NO', 'nn-NO', 'pl-PL', 'pt-PT', 'pt-BR', 'ro-RO', 'ru-RU', * 'sk-SK', 'sr-RS', 'sv-SE', 'th-TH', 'tr-TR', 'uk-UA', 'vi-VN', 'zh-CN', 'zh-HK', 'zh-TW']</code> OR 'any'. If 'any' is used,  * function will check if any of the locales match).<br/><br/><code>options</code> is an optional object that can be supplied with the  * following keys: <code>strictMode</code>, if this is set to <code>true</code>, the mobile phone number must be supplied with the country code and  * therefore must start with <code>+</code>.</td>
+</tr>
+<tr>
+<td><strong>isMongoId(str)</strong></td>
+<td>check if the string is a valid hex-encoded representation of a [MongoDB ObjectId] * [mongoid].</td>
+</tr>
+<tr>
+<td><strong>isMultibyte(str)</strong></td>
+<td>check if the string contains one or more multibyte chars.</td>
+</tr>
+<tr>
+<td><strong>isNumeric(str)</strong></td>
+<td>check if the string contains only numbers.</td>
+</tr>
+<tr>
+<td><strong>isPort(str)</strong></td>
+<td>check if the string is a valid port number.</td>
+</tr>
+<tr>
+<td><strong>isPostalCode(str, locale)</strong></td>
+<td>check if the string is a postal code,<br/><br/>(locale is one of <code>[ 'AT', 'AU', 'BE', * 'BG', 'CA', 'CH', 'CZ', 'DE', 'DK', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IL', 'IN', 'IS', 'IT', 'JP', 'KE', * 'LI', 'LT', 'LU', 'LV', 'MX', 'NL', 'NO', 'PL', 'PT', 'RO', 'RU', 'SA', 'SE', 'SI', 'TN', 'TW', 'US', 'ZA', 'ZM' ]</code> OR 'any'.  * If 'any' is used, function will check if any of the locals match. locale list is <code>validator.isPostalCodeLocales</code>.).</td>
+</tr>
+<tr>
+<td><strong>isSurrogatePair(str)</strong></td>
+<td>check if the string contains any surrogate pairs chars.</td>
+</tr>
+<tr>
+<td><strong>isURL(str [, options])</strong></td>
+<td>check if the string is an URL.<br/><br/><code>options</code> is an object which defaults to <code>{ * protocols: ['http','https','ftp'], require_tld: true, require_protocol: false, require_host: true, require_valid_protocol: * true, allow_underscores: false, host_whitelist: false, host_blacklist: false, allow_trailing_dot: false, * allow_protocol_relative_urls: false }</code>.</td>
+</tr>
+<tr>
+<td><strong>isUUID(str [, version])</strong></td>
+<td>check if the string is a UUID (version 3, 4 or 5).</td>
+</tr>
+<tr>
+<td><strong>isUppercase(str)</strong></td>
+<td>check if the string is uppercase.</td>
+</tr>
+<tr>
+<td><strong>isVariableWidth(str)</strong></td>
+<td>check if the string contains a mixture of full and half-width chars.</td>
+</tr>
+<tr>
+<td><strong>isWhitelisted(str, chars)</strong></td>
+<td>checks characters if they appear in the whitelist.</td>
+</tr>
+<tr>
+<td><strong>matches(str, pattern [, modifiers])</strong></td>
+<td>check if string matches the pattern.<br/><br/>Either <code>matches('foo', /foo/i)</code> or  * <code>matches('foo', 'foo', 'i')</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3>[doc] Sanitizers</h3>
+<p>Here is a list of the sanitizers currently available.</p>
+<table>
+<thead>
+<tr>
+<th>Sanitizer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>blacklist(input, chars)</strong></td>
+<td>remove characters that appear in the blacklist. The characters are used in a RegExp  * and so you will need to escape some chars, e.g. <code>blacklist(input, '\\[\\]')</code>.</td>
+</tr>
+<tr>
+<td><strong>escape(input)</strong></td>
+<td>replace <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>'</code>, <code>&quot;</code> and <code>/</code> with HTML entities.</td>
+</tr>
+<tr>
+<td><strong>unescape(input)</strong></td>
+<td>replaces HTML encoded entities with <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>'</code>, <code>&quot;</code> and <code>/</code>.</td>
+</tr>
+<tr>
+<td><strong>ltrim(input [, chars])</strong></td>
+<td>trim characters from the left-side of the input.</td>
+</tr>
+<tr>
+<td><strong>normalizeEmail(email [, options])</strong></td>
+<td>canonicalizes an email address. (This doesn't validate that the input is an email, if  * you want to validate the email use isEmail beforehand)<br/><br/><code>options</code> is an object with the following keys and default  * values:<br/><ul><li><em>all_lowercase: true</em> - Transforms the local part (before the @ symbol) of all email addresses to  * lowercase. Please note that this may violate RFC 5321, which gives providers the possibility to treat the local part of email  * addresses in a case sensitive way (although in practice most - yet not all - providers don't). The domain part of the email  * address is always lowercased, as it's case insensitive per RFC 1035.</li><li><em>gmail_lowercase: true</em> - GMail addresses are  * known to be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set to false. Please note  * that when <em>all_lowercase</em> is true, GMail addresses are lowercased regardless of the value of this  * setting.</li><li><em>gmail_remove_dots: true</em>: Removes dots from the local part of the email address, as GMail ignores them (e.g.  * &quot;john.doe&quot; and &quot;johndoe&quot; are considered equal).</li><li><em>gmail_remove_subaddress: true</em>: Normalizes addresses by removing  * &quot;sub-addresses&quot;, which is the part following a &quot;+&quot; sign (e.g. &quot;foo+bar@gmail.com&quot; becomes &quot;foo@gmail.com&quot;) * .</li><li><em>gmail_convert_googlemaildotcom: true</em>: Converts addresses with domain @googlemail.com to @gmail.com, as they're  * equivalent.</li><li><em>outlookdotcom_lowercase: true</em> - Outlook.com addresses (including Windows Live and Hotmail) are known to  * be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set to false. Please note that when  * <em>all_lowercase</em> is true, Outlook.com addresses are lowercased regardless of the value of this  * setting.</li><li><em>outlookdotcom_remove_subaddress: true</em>: Normalizes addresses by removing &quot;sub-addresses&quot;, which is the part  * following a &quot;+&quot; sign (e.g. &quot;foo+bar@outlook.com&quot; becomes &quot;foo@outlook.com&quot;).</li><li><em>yahoo_lowercase: true</em> - Yahoo Mail  * addresses are known to be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set to false.  * Please note that when <em>all_lowercase</em> is true, Yahoo Mail addresses are lowercased regardless of the value of this  * setting.</li><li><em>yahoo_remove_subaddress: true</em>: Normalizes addresses by removing &quot;sub-addresses&quot;, which is the part  * following a &quot;-&quot; sign (e.g. &quot;foo-bar@yahoo.com&quot; becomes &quot;foo@yahoo.com&quot;).</li><li><em>icloud_lowercase: true</em> - iCloud addresses  * (including MobileMe) are known to be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set  * to false. Please note that when <em>all_lowercase</em> is true, iCloud addresses are lowercased regardless of the value of this  * setting.</li><li><em>icloud_remove_subaddress: true</em>: Normalizes addresses by removing &quot;sub-addresses&quot;, which is the part  * following a &quot;+&quot; sign (e.g. &quot;foo+bar@icloud.com&quot; becomes &quot;foo@icloud.com&quot;).</li></ul></td>
+</tr>
+<tr>
+<td><strong>rtrim(input [, chars])</strong></td>
+<td>trim characters from the right-side of the input.</td>
+</tr>
+<tr>
+<td><strong>stripLow(input [, keep_new_lines])</strong></td>
+<td>remove characters with a numerical value &lt; 32 and 127, mostly control characters. If  * <code>keep_new_lines</code> is <code>true</code>, newline characters are preserved (<code>\n</code> and <code>\r</code>, hex <code>0xA</code> and <code>0xD</code>). Unicode-safe in JavaScript.</td>
+</tr>
+<tr>
+<td><strong>toBoolean(input [, strict])</strong></td>
+<td>convert the input string to a boolean. Everything except for <code>'0'</code>, <code>'false'</code> and  * <code>''</code> returns <code>true</code>. In strict mode only <code>'1'</code> and <code>'true'</code> return <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>toDate(input)</strong></td>
+<td>convert the input string to a date, or <code>null</code> if the input is not a date.</td>
+</tr>
+<tr>
+<td><strong>toFloat(input)</strong></td>
+<td>convert the input string to a float, or <code>NaN</code> if the input is not a float.</td>
+</tr>
+<tr>
+<td><strong>toInt(input [, radix])</strong></td>
+<td>convert the input string to an integer, or <code>NaN</code> if the input is not an integer.</td>
+</tr>
+<tr>
+<td><strong>trim(input [, chars])</strong></td>
+<td>trim characters (whitespace by default) from both sides of the input.</td>
+</tr>
+<tr>
+<td><strong>whitelist(input, chars)</strong></td>
+<td>remove characters that do not appear in the whitelist. The characters are used in a  * RegExp and so you will need to escape some chars, e.g. <code>whitelist(input, '\\[\\]')</code>.</td>
+</tr>
+</tbody>
+</table></div>
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <!-- <h3 class="subsection-title">方法</h3> -->
+
+        <dl>
+            ﻿
+<hr>
+<dt>
+    <h4 class="name" id="~break">break(txt [, lineLength] [, lineBreak])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>文本自动换行</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>文本</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineLength</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可选><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    10
+                
+                </td>
+            
+
+            <td class="description last"><p>换行长度，0：表示不处理</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineBreak</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可选><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    "\r\n"
+                
+                </td>
+            
+
+            <td class="description last"><p>换行符</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>换行处理过的字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            ﻿
+<hr>
+<dt>
+    <h4 class="name" id="~clearHtml">clearHtml(html)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>去html标签</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>html</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>html字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>去html标签的字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Sat Oct 19th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

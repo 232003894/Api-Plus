@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Api+Plus linq</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.yeti.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Api+Plus</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="$api.html">$api</a></li><li><a href="$plus.html">$plus</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="$api.module_color.html">$api.color</a></li><li><a href="$api.module_img.html">$api.img</a></li><li><a href="$api.module_linq.html">$api.linq</a></li><li><a href="$api.module_math.html">$api.math</a></li><li><a href="$api.module_money.html">$api.money</a></li><li><a href="$api.module_os.html">$api.os</a></li><li><a href="$api.module_qs.html">$api.qs</a></li><li><a href="$api.module_storage.html">$api.storage</a></li><li><a href="$api.module_string.html">$api.string</a></li><li><a href="$api.module_type.html">$api.type</a></li><li><a href="$plus.module_back.html">$plus.back</a></li><li><a href="$plus.module_clip.html">$plus.clip</a></li><li><a href="$plus.module_img.html">$plus.img</a></li><li><a href="$plus.module_msg.html">$plus.msg</a></li><li><a href="$plus.module_ui.html">$plus.ui</a></li><li><a href="$plus.module_win.html">$plus.win</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			﻿
+
+	<h1 class="page-title">linq</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p><b>js版的linq查询，类似 LINQ C#，对数组进行的扩展</b>。引用自<a href="https://github.com/joaom182/linqjs">LINQJS</a><br/></p>
+<h2>Selectors</h2>
+<h4>Select</h4>
+<blockquote>
+<p><code>select(selector:(item) =&gt; item)</code></p>
+</blockquote>
+<p>将数组中的每一个元素转换为新的数组，等同于Array.map</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： [2, 4, 6, 8, 10]
+var doubled = arr.select(function(t){ return t * 2 });
+</code></pre>
+<h4>SelectMany</h4>
+<blockquote>
+<p><code>selectMany(selector:(item) =&gt; item , [resultSelector:(item,value) =&gt; item])</code></p>
+</blockquote>
+<p>将多个数组的每个元素投影到一个数组，并序列为一个展平数组。</p>
+<pre class="prettyprint source"><code>// 对象数组
+var arr = [{Name:&quot;A&quot;, Values:[1, 2, 3, 4]}, {Name:&quot;B&quot;, Values:[5, 6, 7, 8]}];
+// 使用默认结果选择器
+// 结果： [1, 2, 3, 4, 5, 6, 7, 8]
+var res1 = arr.selectMany(function(t){ return t.Values });
+// 使用自定义结果选择器
+// 结果： [{&quot;Name&quot;:&quot;A&quot;,&quot;Val&quot;:1},{&quot;Name&quot;:&quot;A&quot;,&quot;Val&quot;:2},...,{&quot;Name&quot;:&quot;B&quot;,&quot;Val&quot;:8}]
+var res2 = arr.selectMany(function(t){ return t.Values }, function(t, u){ return {Name:t.Name, Val:u}});
+
+// 二维数组
+var arr2 = [[1, 2, 3, 4], [5, 6, 7, 8]]; 
+// 使用默认结果选择器
+// 结果： [1, 2, 3, 4, 5, 6, 7, 8]
+var res1 = arr2.selectMany(function(t){ return t});
+// 使用自定义结果选择器
+// 结果： [{&quot;Val&quot;:1},{&quot;Val&quot;:2},{&quot;Val&quot;:3},{&quot;Val&quot;:4},{&quot;Val&quot;:5},{&quot;Val&quot;:6},{&quot;Val&quot;:7},{&quot;Val&quot;:8}]
+var res2 = arr2.selectMany(function(t){ return t }, function(t, u){ return {Val:u}});
+
+</code></pre>
+<h4>Take</h4>
+<blockquote>
+<p><code>take(count:number)</code></p>
+</blockquote>
+<p>从数组的开始返回指定数量的连续元素，等同于Array.slice(0, count)。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： [1, 2]  
+var res = arr.take(2);
+</code></pre>
+<h4>Skip</h4>
+<blockquote>
+<p><code>skip(start:number[, end:number])</code></p>
+</blockquote>
+<p>绕过数组中指定数量的元素，然后返回其余元素，等同于Array.splice。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： [3, 4, 5]
+var res = arr.skip(2);
+// 结果： [2, 3, 4]
+var res1 = arr.skip(1,4);
+</code></pre>
+<h4>First</h4>
+<blockquote>
+<p><code>first(selector:(item, index, array) =&gt; boolean[, def:any])</code></p>
+</blockquote>
+<p>返回数组的第一个元素。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： 1
+var t1 = arr.first();
+// 使用比较
+// 结果： 3
+var t2 = arr.first(function(t){ return t > 2 });  
+// 使用比较和默认值：10，默认值是指在没有满足条件的元素时输出的值
+// 结果： 10，找不到满足条件的元素，返回默认值
+var t3 = arr.first(function(t){ return t > 10 }, 10);
+</code></pre>
+<h4>Last</h4>
+<blockquote>
+<p><code>last(selector:(item, index, array) =&gt; boolean[, def:any])</code></p>
+</blockquote>
+<p>返回数组的最后一个元素。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： 5
+var t1 = arr.last();
+// 使用比较
+// 结果： 5
+var t2 = arr.last(function(t){ return t > 2 });
+// 使用比较和默认值：10，默认值是指在没有满足条件的元素时输出的值
+// 结果： 10，找不到满足条件的元素，返回默认值
+var t3 = arr.last(function(t){ return t > 10 }, 10);
+</code></pre>
+<h4>Union</h4>
+<blockquote>
+<p><code>union(arr:array)</code></p>
+</blockquote>
+<p>合并两个数组。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [5, 6, 7, 8, 9];
+// 结果： [1, 2, 3, 4, 5, 6, 7, 8, 9]
+var res = arr1.union(arr2);
+</code></pre>
+<h4>Intersect</h4>
+<blockquote>
+<p><code>intersect(arr:array[, comparer:(a, b) =&gt; boolean)]</code></p>
+</blockquote>
+<p>两个数组的交集部分。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [1, 2, 3];
+// 结果： [1, 2, 3]
+var res = arr1.intersect(arr2);
+</code></pre>
+<h4>Except</h4>
+<blockquote>
+<p><code>except(arr:array[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>两个数组的差异部分。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [2, 3, 4];
+// 结果： [1, 5]
+var res = arr1.except(arr2);
+</code></pre>
+<h4>Distinct</h4>
+<blockquote>
+<p><code>distinct([comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>返回数组中不重复的元素。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 2, 3, 3, 4, 5, 5];
+// 结果： [1, 2, 3, 4, 5]
+var res1 = arr.distinct();
+
+var arr2 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:1}];
+// 结果： [{Name:&quot;A&quot;, Val:1}]
+var res2 = arr2.distinct(function(a, b){ return a.Val == b.Val });  
+</code></pre>
+<h4>Zip</h4>
+<blockquote>
+<p><code>zip(arr: array[, selector:(a, b) =&gt; item])</code></p>
+</blockquote>
+<p>将指定的函数应用于两个数组相同索引的元素（以长度小的数组为准），从而生成结果的序列。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;];
+// 结果： [{Num:1, Letter: &quot;A&quot;},{Num:2, Letter: &quot;B&quot;}, {Num:3, Letter: &quot;C&quot;}, {Num:4, Letter: &quot;D&quot;}]
+var res = arr1.zip(arr2, function(a, b){ return {Num:a, Letter:b} });
+</code></pre>
+<h4>IndexOf</h4>
+<blockquote>
+<p><code>indexOf(searchElement:any[, fromIndex:number])</code></p>
+</blockquote>
+<p>返回数组中某个值的第一次出现的索引.</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 2, 5];
+// 结果： 1
+var index = arr.indexOf(2);
+// 结果： 3 起始索引从2开始向后找
+var index = arr.indexOf(2, 2);
+</code></pre>
+<h4>LastIndexOf</h4>
+<blockquote>
+<p><code>indexOf(searchElement:any[, fromIndex:number])</code></p>
+</blockquote>
+<p>返回数组中某个值的最后一次出现的索引.</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5, 3, 4, 5];
+// 结果： 5
+var index = arr.lastIndexOf(3);
+// 结果： 2 起始索引从4开始向前找
+var index = arr.lastIndexOf(3,4);
+</code></pre>
+<h4>Remove</h4>
+<blockquote>
+<p><code>remove(item: any)</code></p>
+</blockquote>
+<p>从数组中移除第一次出现的指定对象。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： [1, 3, 4, 5]
+arr.remove(2);
+</code></pre>
+<h4>RemoveAll</h4>
+<blockquote>
+<p><code>removeAll(selector: (item) =&gt; boolean)</code></p>
+</blockquote>
+<p>移除与指定的条件匹配的所有元素。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： [1, 3, 5]  
+arr.removeAll(function(t){ return t % 2 == 0 });
+</code></pre>
+<h4>OrderBy</h4>
+<blockquote>
+<p><code>orderBy(selector: item =&gt; item[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>按照升序排列数组元素.</p>
+<pre class="prettyprint source"><code>var arr = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;a&quot;, Val:2}, {Name:&quot;B&quot;, Val:1}, {Name:&quot;C&quot;, Val:2}];
+
+var res1 = arr.orderBy(function(t){ return t.Name });
+
+var res2 = arr.orderBy(function(t){ return t.Name }, function(a, b){
+    if(a.toUpperCase() > b.toUpperCase()) return 1;
+    if(a.toUpperCase() &lt; b.toUpperCase()) return -1;
+    return 0;
+});
+
+var res3 = arr.orderBy(function(t){ return t.Val }, function(a, b){
+    return a - b
+});
+</code></pre>
+<h4>OrderByDescending</h4>
+<blockquote>
+<p><code>orderByDescending(selector: item =&gt; item[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>按照降序排列数组元素.</p>
+<pre class="prettyprint source"><code>var arr = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;a&quot;, Val:2}, {Name:&quot;B&quot;, Val:1}, {Name:&quot;C&quot;, Val:2}];
+
+var res = arr.orderByDescending(function(t){ return t.Name });
+</code></pre>
+<h4>ThenBy / ThenByDescending</h4>
+<blockquote>
+<p><code>thenBy(selector: item =&gt; item[, comparer:(a, b) =&gt; boolean])</code><br>
+<code>thenByDescending(selector: item =&gt; item[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>继续排列数组元素，升序/降序，结合 Orderby 和 OrderByDescending 使用可指定多个排序.</p>
+<pre class="prettyprint source"><code>var arr = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;a&quot;, Val:2}, {Name:&quot;B&quot;, Val:1}, {Name:&quot;C&quot;, Val:2}];
+
+var res1 = arr.orderBy(function(t){ return t.Val })
+          .thenBy(function(t){ return t.Name });
+
+var res2 = arr.orderBy(function(t){ return t.Val })
+          .thenByDescending(function(t){ return t.Name });
+
+var res3 = arr.orderByDescending(function(t){ return t.Val })
+          .thenBy(function(t){ return t.Name });
+</code></pre>
+<h4>InnerJoin</h4>
+<blockquote>
+<p><code>outer.innerJoin(inner: array, outerKeySelector: item =&gt; item , innerKeySelector: item =&gt; item, resultSelector: (outer, inner) =&gt; item[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>内连接，用于显示根据两个数组中的指定属性符合条件的元素.</p>
+<pre class="prettyprint source"><code>var arr1 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:2}, {Name:&quot;C&quot;, Val:3}];
+
+var arr2 = [{Code:&quot;A&quot;}, {Code:&quot;B&quot;}, {Name:&quot;C&quot;, Code:&quot;C&quot;}];
+
+var res1 = arr1.innerJoin(arr2,
+    function (t) { return t.Name },                                      // arr1 selector
+    function (u) { return u.Code },                                      // arr2 selector
+    function (t, u) { return { Name: t.Name, Val: t.Val, Code: u.Code } });  // result selector
+
+// using custom comparer
+var res2 = arr1.innerJoin(arr2,
+    function (t) { return t.Name },                                    // arr1 selector
+    function (u) { return u.Code },                                    // arr2 selector
+    function (t, u) { return { Name: t.Name, Val: t.Val, Code: u.Code } },  // result selector
+    function (a, b) { return a.toUpperCase() == b.toUpperCase() });         // comparer
+</code></pre>
+<h4>GroupJoin</h4>
+<blockquote>
+<p><code>outer.groupJoin(inner: array, groupKeyOuterSelector: item =&gt; item , groupKeyInnerSelector: item =&gt; item, resultSelector: (outer, inner) =&gt; item[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>基于key的相等将两个数组的元素相关联，并对结果进行分组.</p>
+<pre class="prettyprint source"><code>var arr1 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:2}, {Name:&quot;C&quot;, Val:3}];
+var arr2 = [{Code:&quot;A&quot;}, {Code:&quot;A&quot;}, {Code:&quot;B&quot;}, {Code:&quot;B&quot;}, {Code:&quot;C&quot;}];  
+
+var res1 = arr1.groupJoin(arr2,
+    function(t){ return t.Name },                     // arr1 selector
+    function(u){ return u.Code },                     // arr2 selector
+    function(t, u){ return {Item:t, Group:u} }) ;         // result selector  
+
+// using custom comparer  
+var res2 = arr1.groupJoin(arr2,
+    function(t){ return t.Name },                             // arr1 selector
+    function(u){ return u.Code },                             // arr2 selector
+    function(t, u){ return {Item:t, Group:u} },                 // result selector
+    function(a, b){ return a.toUpperCase() == b.toUpperCase() });     // comparer
+</code></pre>
+<h4>GroupBy</h4>
+<blockquote>
+<p><code>groupBy(selector: item =&gt; item[, comparer:(a, b) =&gt; boolean])</code></p>
+</blockquote>
+<p>对数组的元素进行分组.</p>
+<pre class="prettyprint source"><code>var arr = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:1}, {Name:&quot;C&quot;, Val:2}, {Name:&quot;D&quot;, Val:2}];
+// 结果： [[{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:1}], [{Name:&quot;C&quot;, Val:2}, {Name:&quot;D&quot;, Val:2}]]
+var res = arr.groupBy(function(t){ return t.Val });
+
+res.forEach(function(t){
+    console.log(&quot;Key: &quot; + t.key, &quot;Length: &quot; + t.length);
+});
+// Key: 1 Length: 2  
+// Key: 2 Length: 2
+</code></pre>
+<h4>ToDictionary</h4>
+<blockquote>
+<p><code>toDictionary(keySelector: item =&gt; item, valueSelector: item =&gt; item)</code></p>
+</blockquote>
+<p>数组转换为对象。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果： dic = {Num5: 5, Num4: 4, Num3: 3, Num2: 2, Num1: 1}
+var dic = arr.toDictionary(t => &quot;Num&quot; + t, u => u );
+</code></pre>
+<h2>Aggregations</h2>
+<h4>Aggregate</h4>
+<blockquote>
+<p><code>aggregate(callback: (previous: any, current: any, index: number, array: array)=&gt; item[, initialValue: any])</code></p>
+</blockquote>
+<p>在数组上应用累加器函数，等同于Array.reduce。<br>
+callback函数接受4个参数：之前值、当前值、索引值以及数组本身。<br>
+initialValue参数可选，表示初始值。<br>
+若指定initialValue，则当作最初使用的previous值；<br>
+如果无initialValue，则使用数组的第一个元素作为previous初始值，同时current往后排一位，相比有initialValue值少一次迭代。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果：15
+var sum = arr.aggregate(function(a, b){ return a + b }, 0);
+</code></pre>
+<h4>Min</h4>
+<blockquote>
+<p><code>min([selector: item =&gt; item])</code></p>
+</blockquote>
+<p>返回值数组中的最小值。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+// 结果：1
+var min1 = arr.min();
+
+var arr2 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:2}];
+// 结果：1
+var min2 = arr2.min(function(t){ return t.Val });
+</code></pre>
+<h4>Max</h4>
+<blockquote>
+<p><code>max([selector: item =&gt; item])</code></p>
+</blockquote>
+<p>返回值数组中的最大值。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+// 结果：8
+var max1 = arr.max();
+
+var arr2 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:2}];
+// 结果：2
+var max2 = arr2.max(function(t){ return t.Val });
+</code></pre>
+<h4>Sum</h4>
+<blockquote>
+<p><code>sum([selector: item =&gt; item])</code></p>
+</blockquote>
+<p>计算一个数值数组的和。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+// 结果：36
+var sum1 = arr1.sum();
+
+var arr2 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:2}];
+// 结果：3
+var sum2 = arr2.sum(function(t){ return t.Val });
+</code></pre>
+<h2>Predicates</h2>
+<h4>Where</h4>
+<blockquote>
+<p><code>where(predicate: item =&gt; boolean[, thisObject: any])</code></p>
+</blockquote>
+<p>基于过滤一数组的值，等同于Array.filter。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果：[3, 4, 5]
+var res = arr.where(function(t){ return t > 2 }) ;
+</code></pre>
+<h4>Any</h4>
+<blockquote>
+<p><code>any(predicate: item =&gt; boolean[, thisObject: any])</code></p>
+</blockquote>
+<p>确定数组中的某个元素是否存在或满足条件，等同于Array.some。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果：true
+var res1 = arr.any();
+// 结果：false
+var res2 = arr.any(function(t){ return t > 5 });
+</code></pre>
+<h4>All</h4>
+<blockquote>
+<p><code>all(predicate: item =&gt; boolean[, thisObject: any])</code></p>
+</blockquote>
+<p>确定数组中的每个元素是否存在或满足条件，等同于Array.every。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果：true
+var res = arr.all(function(t){ return t &lt; 6 });
+</code></pre>
+<h4>TakeWhile</h4>
+<blockquote>
+<p><code>takeWhile(predicate: item =&gt; boolean)</code></p>
+</blockquote>
+<p>只要指定的条件为true，就返回数组中之前的元素，然后跳过剩余的元素。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// 结果：[1, 2, 3]
+var res = arr.takeWhile(function(t){ return t % 4 != 0 });
+</code></pre>
+<h4>SkipWhile</h4>
+<blockquote>
+<p><code>skipWhile(predicate: item =&gt; boolean)</code></p>
+</blockquote>
+<p>只要指定的条件为true，就会跳过数组中之前的元素，然后返回剩余的元素。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// 结果：[ 4, 5, 6, 7, 8]
+var res = arr.skipWhile(function(t){ return t % 4 != 0 }) ;
+</code></pre>
+<h4>Contains</h4>
+<blockquote>
+<p><code>contains(item: any[, comparer: item =&gt; boolean])</code></p>
+</blockquote>
+<p>确定序列是否包含指定的元素。</p>
+<pre class="prettyprint source"><code>var arr1 = [1, 2, 3, 4, 5];
+// 结果：true
+var res1 = arr.contains(2);
+
+var arr2 = [{Name:&quot;A&quot;, Val:1}, {Name:&quot;B&quot;, Val:1}];
+// 结果：true
+var res2 = arr2.contains({Name:&quot;C&quot;, Val:1}, function(a, b){ return a.Val == b.Val }) ; 
+</code></pre>
+<h2>Iterations</h2>
+<h4>Range</h4>
+<blockquote>
+<p><code>range(start: any, count: any)</code></p>
+</blockquote>
+<p>返回基于start和end参数的数字数组</p>
+<pre class="prettyprint source"><code>// 结果：[1,2,3,4,5]
+var range = Array.range(1, 5);
+</code></pre>
+<h4>ForEach</h4>
+<blockquote>
+<p><code>range(callback: item =&gt; any)[, thisObject: any])</code></p>
+</blockquote>
+<p>对数组的每个元素执行指定的操作，等同于Array.forEach。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+
+arr.forEach(function(t){ if(t % 2 ==0) console.log(t); });
+</code></pre>
+<h4>DefaultIfEmpty</h4>
+<blockquote>
+<p><code>defaultIfEmpty(val: any)</code></p>
+</blockquote>
+<p>如果数组为空，则返回指定的数组元素或单例数组中的指定值。</p>
+<pre class="prettyprint source"><code>var arr = [1, 2, 3, 4, 5];
+// 结果：[5]
+var res = arr.where(function(t){ return t > 5 }).defaultIfEmpty(5);</code></pre></div>
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Sat Oct 19th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

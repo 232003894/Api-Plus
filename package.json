@@ -1,0 +1,22 @@
+{
+  "name": "doc",
+  "description": "Api-Plus docs",
+  "version": "1.0.2",
+  "author": "cwb",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "H5 plus",
+    "HTML5+",
+    "App",
+    "h5+",
+    "vue"
+  ],
+  "devDependencies": {
+    "moment": "^2.22.2",
+    "sanitize-html": "^1.18.5"
+  },
+  "scripts": {
+    "doc": "jsdoc -c ./jsdoc-conf.json"
+  }
+}
