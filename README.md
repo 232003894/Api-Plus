@@ -108,7 +108,7 @@ Vue.use(plus, {
 - [Vue2 中文](https://cn.vuejs.org/v2/guide/index.html)
 - [html5plus](http://www.html5plus.org/doc/h5p.html)
 
-# api
+# Api
 
 > `与设备无关的常用api`
 
