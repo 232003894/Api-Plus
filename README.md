@@ -1,4 +1,4 @@
-# Api+Plus
+# Plus
 
 [![](https://img.shields.io/npm/l/@h5plus/core.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/core) [![](https://img.shields.io/npm/v/@h5plus/core.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/core) [![](https://img.shields.io/npm/dm/@h5plus/core.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/core)
 
@@ -107,6 +107,33 @@ Vue.use(plus, {
 
 - [Vue2 中文](https://cn.vuejs.org/v2/guide/index.html)
 - [html5plus](http://www.html5plus.org/doc/h5p.html)
+
+# api
+
+> `与设备无关的常用api`
+
+## 安装
+
+```shell
+npm install @h5plus/api --save
+yarn add @h5plus/api
+```
+
+## 基本使用
+
+```javascript
+import '@h5plus/api'
+```
+
+## 参考
+
+- [decimal.js](https://github.com/MikeMcl/decimal.js)
+- [accounting.js](https://github.com/openexchangerates/accounting.js)
+- [validator.js](https://github.com/chriso/validator.js)
+- [color](https://github.com/Qix-/color)
+- [qs](https://github.com/ljharb/qs)
+- [linqjs](https://github.com/joaom182/linqjs)
+
 
 # [Persist](https://www.npmjs.com/package/@h5plus/persist)
 
