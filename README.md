@@ -1,10 +1,10 @@
-# Plus
+# [Plus](https://www.npmjs.com/package/@h5plus/core)
 
 [![](https://img.shields.io/npm/l/@h5plus/core.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/core) [![](https://img.shields.io/npm/v/@h5plus/core.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/core) [![](https://img.shields.io/npm/dm/@h5plus/core.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/core)
 
 > `设备相关的常用api`
 
-## 安装
+### 安装
 
 ```bash
 npm install @h5plus/core --save
@@ -12,7 +12,7 @@ npm install @h5plus/core --save
 yarn add @h5plus/core
 ```
 
-## 基本使用
+### 基本使用
 
 ```javascript
 import Vue from 'vue'
@@ -42,15 +42,15 @@ Vue.use(plus)
 
 `用于监听自定义的事件广播`
 
-#### - $api [查看]{@link $api}
+#### - $api
 
 > `全局window中扩展$api，包含常用api，与设备无关的`
 
-#### - $plus [查看]{@link $plus}
+#### - $plus
 
 > `全局window中扩展$plus，包含设备相关的api`
 
-### 示例
+#### - 示例
 
 ```javascript
 export default {
@@ -90,7 +90,7 @@ export default {
 }
 ```
 
-## 自定义扩展
+### 自定义扩展
 
 ```javascript
 import Vue from 'vue'
@@ -103,29 +103,31 @@ Vue.use(plus, {
 })
 ```
 
-## 参考
+### 参考
 
 - [Vue2 中文](https://cn.vuejs.org/v2/guide/index.html)
 - [html5plus](http://www.html5plus.org/doc/h5p.html)
 
-# Api
+# [Api](https://www.npmjs.com/package/@h5plus/api)
+
+[![](https://img.shields.io/npm/l/@h5plus/api.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/api) [![](https://img.shields.io/npm/v/@h5plus/api.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/api) [![](https://img.shields.io/npm/dm/@h5plus/api.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/api)
 
 > `与设备无关的常用api`
 
-## 安装
+### 安装
 
 ```shell
 npm install @h5plus/api --save
 yarn add @h5plus/api
 ```
 
-## 基本使用
+### 基本使用
 
 ```javascript
 import '@h5plus/api'
 ```
 
-## 参考
+### 参考
 
 - [decimal.js](https://github.com/MikeMcl/decimal.js)
 - [accounting.js](https://github.com/openexchangerates/accounting.js)
@@ -137,16 +139,24 @@ import '@h5plus/api'
 
 # [Persist](https://www.npmjs.com/package/@h5plus/persist)
 
+[![](https://img.shields.io/npm/l/@h5plus/persist.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/persist) [![](https://img.shields.io/npm/v/@h5plus/persist.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/persist) [![](https://img.shields.io/npm/dm/@h5plus/persist.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/persist)
+
 > `基于Vuex的持久化保存，加入了HTML5+ 的 plus.storage 支持`
 
 # [Touch](https://www.npmjs.com/package/@h5plus/touch)
+
+[![](https://img.shields.io/npm/l/@h5plus/touch.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/touch) [![](https://img.shields.io/npm/v/@h5plus/touch.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/touch) [![](https://img.shields.io/npm/dm/@h5plus/touch.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/touch)
 
 > `基于Vue的touch插件`
 
 # [Bus](https://www.npmjs.com/package/@h5plus/bus)
 
+[![](https://img.shields.io/npm/l/@h5plus/bus.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/bus) [![](https://img.shields.io/npm/v/@h5plus/bus.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/bus) [![](https://img.shields.io/npm/dm/@h5plus/bus.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/bus)
+
 > `基于Vue的事件总线`
 
 # [img-ui](https://www.npmjs.com/package/@h5plus/img-ui)
+
+[![](https://img.shields.io/npm/l/@h5plus/img-ui.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/img-ui) [![](https://img.shields.io/npm/v/@h5plus/img-ui.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/img-ui) [![](https://img.shields.io/npm/dm/@h5plus/img-ui.svg?style=flat-square)](https://www.npmjs.com/package/@h5plus/img-ui)
 
 > `跟图像有关的组件,例如二维码、html保存图片等`

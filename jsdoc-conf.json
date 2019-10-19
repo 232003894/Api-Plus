@@ -22,7 +22,7 @@
     "dateFormat": "ddd MMM Do YYYY", // 当需要打印日期时使用的格式
     "outputSourceFiles": false, // 是否输出文件源码
     "outputSourcePath": false, // 是否输出源码路径
-    "systemName": "Api+Plus", // 系统名称
+    "systemName": "@h5plus", // 系统名称
     "footer": "", // 页脚内容
     "copyright": "", // 页脚版权信息
     "navType": "vertical", // vertical 或 inline
@@ -48,6 +48,6 @@
     "readme": "README.md" // 要写到文档首页的 readme 文档。-R README.md
   },
   "metadata":{
-    "title": "Api+Plus"
+    "title": "@h5plus"
   }
 }

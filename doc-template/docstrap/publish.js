@@ -805,14 +805,14 @@ exports.publish = function (taffyData, opts, tutorials) {
         longname: longname
       });
       if (myModules.length) {
-        generate('module', '' + myModules[0].name, myModules, helper.longnameToUrl[longname]);
+        generate('module', '模块: ' + myModules[0].name, myModules, helper.longnameToUrl[longname]);
       }
 
       var myNamespaces = helper.find(namespaces, {
         longname: longname
       });
       if (myNamespaces.length) {
-        generate('namespace', 'Namespace: ' + myNamespaces[0].name, myNamespaces, helper.longnameToUrl[longname]);
+        generate('namespace', '命名空间: ' + myNamespaces[0].name, myNamespaces, helper.longnameToUrl[longname]);
       }
 
       var myMixins = helper.find(mixins, {

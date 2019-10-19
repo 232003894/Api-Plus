@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Api+Plus Index</title>
+	<title>@h5plus Index</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">Api+Plus</a>
+		<a class="navbar-brand" href="index.html">@h5plus</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -93,17 +93,17 @@
 
 
     <section class="readme-section">
-        <article><h1>Plus</h1>
+        <article><h1><a href="https://www.npmjs.com/package/@h5plus/core">Plus</a></h1>
 <p><a href="https://www.npmjs.com/package/@h5plus/core"><img src="https://img.shields.io/npm/l/@h5plus/core.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/core"><img src="https://img.shields.io/npm/v/@h5plus/core.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/core"><img src="https://img.shields.io/npm/dm/@h5plus/core.svg?style=flat-square" alt=""></a></p>
 <blockquote>
 <p><code>设备相关的常用api</code></p>
 </blockquote>
-<h2>安装</h2>
+<h3>安装</h3>
 <pre class="prettyprint source lang-bash"><code>npm install @h5plus/core --save
 
 yarn add @h5plus/core
 </code></pre>
-<h2>基本使用</h2>
+<h3>基本使用</h3>
 <pre class="prettyprint source lang-javascript"><code>import Vue from 'vue'
 import plus from '@h5plus/core'
 Vue.use(plus)
@@ -128,15 +128,15 @@ Vue.use(plus)
 </ol>
 <h4>- listener Vue 选项</h4>
 <p><code>用于监听自定义的事件广播</code></p>
-<h4>- $api <a href="$api.html"><code>查看</code></a></h4>
+<h4>- $api</h4>
 <blockquote>
 <p><code>全局window中扩展$api，包含常用api，与设备无关的</code></p>
 </blockquote>
-<h4>- $plus <a href="$plus.html"><code>查看</code></a></h4>
+<h4>- $plus</h4>
 <blockquote>
 <p><code>全局window中扩展$plus，包含设备相关的api</code></p>
 </blockquote>
-<h3>示例</h3>
+<h4>- 示例</h4>
 <pre class="prettyprint source lang-javascript"><code>export default {
   name: 'app',
   // Events模块管理客户端事件，包括系统事件，如扩展API加载完毕、程序前后台切换等。
@@ -173,7 +173,7 @@ Vue.use(plus)
   }
 }
 </code></pre>
-<h2>自定义扩展</h2>
+<h3>自定义扩展</h3>
 <pre class="prettyprint source lang-javascript"><code>import Vue from 'vue'
 import plus from 'h5pa-vue'
 Vue.use(plus, {
@@ -183,23 +183,24 @@ Vue.use(plus, {
   isSim: true
 })
 </code></pre>
-<h2>参考</h2>
+<h3>参考</h3>
 <ul>
 <li><a href="https://cn.vuejs.org/v2/guide/index.html">Vue2 中文</a></li>
 <li><a href="http://www.html5plus.org/doc/h5p.html">html5plus</a></li>
 </ul>
-<h1>Api</h1>
+<h1><a href="https://www.npmjs.com/package/@h5plus/api">Api</a></h1>
+<p><a href="https://www.npmjs.com/package/@h5plus/api"><img src="https://img.shields.io/npm/l/@h5plus/api.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/api"><img src="https://img.shields.io/npm/v/@h5plus/api.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/api"><img src="https://img.shields.io/npm/dm/@h5plus/api.svg?style=flat-square" alt=""></a></p>
 <blockquote>
 <p><code>与设备无关的常用api</code></p>
 </blockquote>
-<h2>安装</h2>
+<h3>安装</h3>
 <pre class="prettyprint source lang-shell"><code>npm install @h5plus/api --save
 yarn add @h5plus/api
 </code></pre>
-<h2>基本使用</h2>
+<h3>基本使用</h3>
 <pre class="prettyprint source lang-javascript"><code>import '@h5plus/api'
 </code></pre>
-<h2>参考</h2>
+<h3>参考</h3>
 <ul>
 <li><a href="https://github.com/MikeMcl/decimal.js">decimal.js</a></li>
 <li><a href="https://github.com/openexchangerates/accounting.js">accounting.js</a></li>
@@ -209,18 +210,22 @@ yarn add @h5plus/api
 <li><a href="https://github.com/joaom182/linqjs">linqjs</a></li>
 </ul>
 <h1><a href="https://www.npmjs.com/package/@h5plus/persist">Persist</a></h1>
+<p><a href="https://www.npmjs.com/package/@h5plus/persist"><img src="https://img.shields.io/npm/l/@h5plus/persist.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/persist"><img src="https://img.shields.io/npm/v/@h5plus/persist.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/persist"><img src="https://img.shields.io/npm/dm/@h5plus/persist.svg?style=flat-square" alt=""></a></p>
 <blockquote>
 <p><code>基于Vuex的持久化保存，加入了HTML5+ 的 plus.storage 支持</code></p>
 </blockquote>
 <h1><a href="https://www.npmjs.com/package/@h5plus/touch">Touch</a></h1>
+<p><a href="https://www.npmjs.com/package/@h5plus/touch"><img src="https://img.shields.io/npm/l/@h5plus/touch.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/touch"><img src="https://img.shields.io/npm/v/@h5plus/touch.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/touch"><img src="https://img.shields.io/npm/dm/@h5plus/touch.svg?style=flat-square" alt=""></a></p>
 <blockquote>
 <p><code>基于Vue的touch插件</code></p>
 </blockquote>
 <h1><a href="https://www.npmjs.com/package/@h5plus/bus">Bus</a></h1>
+<p><a href="https://www.npmjs.com/package/@h5plus/bus"><img src="https://img.shields.io/npm/l/@h5plus/bus.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/bus"><img src="https://img.shields.io/npm/v/@h5plus/bus.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/bus"><img src="https://img.shields.io/npm/dm/@h5plus/bus.svg?style=flat-square" alt=""></a></p>
 <blockquote>
 <p><code>基于Vue的事件总线</code></p>
 </blockquote>
 <h1><a href="https://www.npmjs.com/package/@h5plus/img-ui">img-ui</a></h1>
+<p><a href="https://www.npmjs.com/package/@h5plus/img-ui"><img src="https://img.shields.io/npm/l/@h5plus/img-ui.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/img-ui"><img src="https://img.shields.io/npm/v/@h5plus/img-ui.svg?style=flat-square" alt=""></a> <a href="https://www.npmjs.com/package/@h5plus/img-ui"><img src="https://img.shields.io/npm/dm/@h5plus/img-ui.svg?style=flat-square" alt=""></a></p>
 <blockquote>
 <p><code>跟图像有关的组件,例如二维码、html保存图片等</code></p>
 </blockquote></article>
