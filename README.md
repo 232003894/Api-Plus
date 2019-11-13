@@ -84,7 +84,7 @@ export default {
   methods: {
     // 广播消息
     send: function() {
-      this.plus.send('customEvent', { a: 1 }, { self: true })
+      $plus.msg.send('customEvent', { a: 1 }, { self: true })
     }
   }
 }
