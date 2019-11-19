@@ -3,7 +3,7 @@
     "allowUnknownTags": false
   },
   "source": {
-    "include": ["../api/index.js","../api/lib","../core/lib"], // JavaScript 文件(目录)列表
+    "include": ["../api/index.js", "../api/lib", "../core/lib"], // JavaScript 文件(目录)列表
     "exclude": [], // 在 include 中需要过滤的文件(目录)
     "includePattern": ".+\\.(js|es)$" // 正则过滤符合规则的文件
   },
@@ -15,6 +15,9 @@
     "hardwrap": true // 允许多行
   },
   "templates": {
+    "default":{
+      "outputSourceFiles": false // 是否输出文件源码
+    },
     // 模板配置，包含了 DocStrap 的配置参数
     // "logoFile": "images/logo.png",        //logo 文件路径
     "cleverLinks": true,
@@ -47,7 +50,7 @@
     "debug": false, // 启用调试模式。--debug
     "readme": "README.md" // 要写到文档首页的 readme 文档。-R README.md
   },
-  "metadata":{
+  "metadata": {
     "title": "@h5plus"
   }
 }

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>core/lib/ui.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="$api.module_color.html">color</a></li><li><a href="$api.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$api.module_img.html#~base64">base64</a></li><li data-type='method'><a href="$api.module_img.html#~load">load</a></li></ul></li><li><a href="$api.module_linq.html">linq</a></li><li><a href="$api.module_math.html">math</a></li><li><a href="$api.module_money.html">money</a><ul class='methods'><li data-type='method'><a href="$api.module_money.html#~formatColumn">formatColumn</a></li><li data-type='method'><a href="$api.module_money.html#~formatMoney">formatMoney</a></li><li data-type='method'><a href="$api.module_money.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="$api.module_money.html#~unformat">unformat</a></li><li data-type='method'><a href="$api.module_money.html#~unit">unit</a></li></ul></li><li><a href="$api.module_os.html">os</a></li><li><a href="$api.module_qs.html">qs</a></li><li><a href="$api.module_storage.html">storage</a><ul class='methods'><li data-type='method'><a href="$api.module_storage.html#~del">del</a></li><li data-type='method'><a href="$api.module_storage.html#~get">get</a></li><li data-type='method'><a href="$api.module_storage.html#~set">set</a></li></ul></li><li><a href="$api.module_string.html">string</a><ul class='methods'><li data-type='method'><a href="$api.module_string.html#~break">break</a></li><li data-type='method'><a href="$api.module_string.html#~byteLength">byteLength</a></li><li data-type='method'><a href="$api.module_string.html#~clearHtml">clearHtml</a></li><li data-type='method'><a href="$api.module_string.html#~html2Text">html2Text</a></li><li data-type='method'><a href="$api.module_string.html#~unique">unique</a></li></ul></li><li><a href="$api.module_type.html">type</a><ul class='methods'><li data-type='method'><a href="$api.module_type.html#~add">add</a></li><li data-type='method'><a href="$api.module_type.html#~isArray">isArray</a></li><li data-type='method'><a href="$api.module_type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="$api.module_type.html#~isDate">isDate</a></li><li data-type='method'><a href="$api.module_type.html#~isError">isError</a></li><li data-type='method'><a href="$api.module_type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="$api.module_type.html#~isNaN">isNaN</a></li><li data-type='method'><a href="$api.module_type.html#~isNull">isNull</a></li><li data-type='method'><a href="$api.module_type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="$api.module_type.html#~isObject">isObject</a></li><li data-type='method'><a href="$api.module_type.html#~isPlainObject">isPlainObject</a></li><li data-type='method'><a href="$api.module_type.html#~isRegExp">isRegExp</a></li><li data-type='method'><a href="$api.module_type.html#~isString">isString</a></li><li data-type='method'><a href="$api.module_type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="$api.module_type.html#~isWindow">isWindow</a></li></ul></li><li><a href="$plus.module_back.html">back</a><ul class='methods'><li data-type='method'><a href="$plus.module_back.html#~add">add</a></li><li data-type='method'><a href="$plus.module_back.html#~remove">remove</a></li></ul></li><li><a href="$plus.module_clip.html">clip</a><ul class='methods'><li data-type='method'><a href="$plus.module_clip.html#~read">read</a></li><li data-type='method'><a href="$plus.module_clip.html#~write">write</a></li></ul></li><li><a href="$plus.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$plus.module_img.html#~capture">capture</a></li><li data-type='method'><a href="$plus.module_img.html#~compress">compress</a></li><li data-type='method'><a href="$plus.module_img.html#~pick">pick</a></li><li data-type='method'><a href="$plus.module_img.html#~save">save</a></li></ul></li><li><a href="$plus.module_msg.html">msg</a><ul class='methods'><li data-type='method'><a href="$plus.module_msg.html#~send">send</a></li></ul></li><li><a href="$plus.module_ui.html">ui</a><ul class='methods'><li data-type='method'><a href="$plus.module_ui.html#~beginPullRefresh">beginPullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~closeWaiting">closeWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~pullRefresh">pullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~showWaiting">showWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~toast">toast</a></li></ul></li><li><a href="$plus.module_win.html">win</a><ul class='methods'><li data-type='method'><a href="$plus.module_win.html#~all">all</a></li><li data-type='method'><a href="$plus.module_win.html#~close">close</a></li><li data-type='method'><a href="$plus.module_win.html#~create">create</a></li><li data-type='method'><a href="$plus.module_win.html#~get">get</a></li><li data-type='method'><a href="$plus.module_win.html#~getTop">getTop</a></li><li data-type='method'><a href="$plus.module_win.html#~goHome">goHome</a></li><li data-type='method'><a href="$plus.module_win.html#~hide">hide</a></li><li data-type='method'><a href="$plus.module_win.html#~home">home</a></li><li data-type='method'><a href="$plus.module_win.html#~id">id</a></li><li data-type='method'><a href="$plus.module_win.html#~isHome">isHome</a></li><li data-type='method'><a href="$plus.module_win.html#~isTop">isTop</a></li><li data-type='method'><a href="$plus.module_win.html#~menu">menu</a></li><li data-type='method'><a href="$plus.module_win.html#~open">open</a></li><li data-type='method'><a href="$plus.module_win.html#~openBrowser">openBrowser</a></li><li data-type='method'><a href="$plus.module_win.html#~show">show</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="$api.html">$api</a><ul class='methods'><li data-type='method'><a href="$api.html#.mix">mix</a></li></ul></li><li><a href="$plus.html">$plus</a><ul class='methods'><li data-type='method'><a href="$plus.html#.errorPage">errorPage</a></li><li data-type='method'><a href="$plus.html#.winStyle">winStyle</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">core/lib/ui.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// NOTE: [plus] 调用了 $api.os
+// NOTE: [plus] 调用了 $api.type
+// NOTE: [plus] 调用了 $api.mix
+// NOTE: [plus] 调用了 $api.string
+/**
+ * &lt;b>H5+ nativeUI&lt;/b>
+ * @module ui
+ * @memberof $plus
+ * @summary H5+ nativeUI
+ */
+
+let ui = {}
+
+let os = $api.os
+
+// #region 常量
+// 载入中
+let loadingTitle = ''
+
+let WaitingOptions = {
+  width: '100px',
+  height: '100px',
+  // 等待对话框显示区域的背景色
+  background: 'rgba(0,0,0,0.65)',
+  // 等待框显示区域的圆角
+  round: 4,
+  // 可取值"none"表示截获处理返回键，但不做任何响应；"close"表示截获处理返回键并关闭等待框；"transmit"表示不截获返回键，向后传递给Webview窗口继续处理（与未显示等待框的情况一致）。
+  back: 'transmit',
+  loading: {
+    height: '30px'
+  }
+}
+let toastOption = {
+  // 提示消息在屏幕中的垂直位置：可选值为"top"、"center"、"bottom"，分别为垂直居顶、居中、居底，未设置时默认值为"bottom"
+  verticalAlign: 'bottom',
+  // 提示消息框显示的时间：可选值为"long"、"short"，值为"long"时显示时间约为3.5s，值为"short"时显示时间约为2s，未设置时默认值为"short"。
+  duration: 'short',
+  // 提示消息框上显示的图标：png格式，并且必须是本地资源地址；图标与文字分两行显示，上面显示图标，下面显示文字；
+  icon: '',
+  // 提示
+  lineLength: 0
+}
+// #endregion
+
+/**
+ * 显示系统等待对话框
+ * @public
+ * @function showWaiting
+ * @param {string} title='' - 标题
+ * @example
+ * $plus.ui.showWaiting("载入中")
+ */
+ui.showWaiting = function(title) {
+  if (title === undefined) {
+    title = ''
+  }
+  if (!title) {
+    title = loadingTitle
+  }
+  if (window.plus) {
+    plus.nativeUI.showWaiting(title, WaitingOptions)
+    // return true
+  } else if ($plus.requirePlus === false) {
+    console.log('[' + os.name + ']不支持nativeUI的showWaiting方法!')
+    // return false
+  }
+}
+
+/**
+ * 关闭系统等待对话框
+ * @public
+ * @function closeWaiting
+ * @example
+ * $plus.ui.closeWaiting()
+ */
+ui.closeWaiting = function() {
+  if (window.plus) {
+    plus.nativeUI.closeWaiting()
+    return true
+  } else if ($plus.requirePlus === false) {
+    console.log('[' + os.name + ']不支持nativeUI的closeWaiting方法!')
+    return false
+  }
+}
+
+/**
+ * 显示自动消失的提示消息
+ * @public
+ * @function toast
+ * @param {string} msg - 提示消息上显示的文字内容
+ * @param {object} opts - 提示消息参数，只有&lt;b>lineLength属性&lt;/b>是扩展的，&lt;br>下列只是部分常用的，其他完整的可以参考{@link http://html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.ToastOptions HTML5+ API}。
+ * @param {number} [opts.lineLength=0] - 提示信息（msg）的手动换行长度，单位是字节，0表示不处理。
+ * @param {string} [opts.verticalAlign='bottom'] - 屏幕中的垂直位置：可选值为"top"、"center"、"bottom"，分别为垂直居顶、居中、居底。
+ * @param {string} [opts.icon=''] - 显示的图标：png格式，并且必须是本地资源地址；&lt;br>默认图标与文字分两行显示，上面显示图标，下面显示文字。
+ * @param {string} [opts.duration='short'] - 显示的时间：可选值为"long"、"short"，"long"约为3.5s，"short"约为2s。
+ * @example &lt;caption>垂直居顶自动换行的消息.&lt;/caption>
+ * $plus.ui.toast(
+ *  "创建并显示系统样式提示消息，弹出的提示消息为非阻塞模式，显示指定时间后自动消失。长时间提示消息显示时间约为3.5s，短时间提示消息显示时间约为2s。",
+ *  {
+ *    verticalAlign: "top",
+ *    duration: "short",
+ *    lineLength: 0
+ *  }
+ *)
+ * @example &lt;caption>垂直居中13个字节换行的消息.&lt;/caption>
+ * $plus.ui.toast(
+ *  "创建并显示系统样式提示消息，弹出的提示消息为非阻塞模式，显示指定时间后自动消失。长时间提示消息显示时间约为3.5s，短时间提示消息显示时间约为2s。",
+ *  {
+ *    verticalAlign: "center",
+ *    duration: "short",
+ *    lineLength: 13
+ *  }
+ *)
+ * @example &lt;caption>带成功图标的消息.&lt;/caption>
+ * // 图标png格式，并且必须是本地资源地址（Hbuilder的App项目路径，不能是远程路径）
+ * $plus.ui.toast("提案成功", {
+ *    verticalAlign: "center",
+ *    icon: "/ui/ok.png"
+ *  }
+ *)
+ */
+ui.toast = function(msg, opts) {
+  if (msg === undefined) {
+    msg = ''
+  }
+  if (opts === undefined) {
+    opts = {}
+  }
+  if (!msg || !$api.type.isString(msg)) {
+    return
+  }
+  opts = $api.mix(true, {}, toastOption, opts)
+  msg = $api.string.break(msg, opts.lineLength)
+  if (
+    opts.verticalAlign !== 'bottom' &amp;&amp;
+    opts.verticalAlign !== 'top' &amp;&amp;
+    opts.verticalAlign !== 'center'
+  ) {
+    opts.verticalAlign = 'bottom'
+  }
+  if (opts.duration !== 'long' &amp;&amp; opts.duration !== 'short') {
+    opts.duration = 'short'
+  }
+  if (!$api.type.isString(opts.icon)) {
+    opts.icon = ''
+  }
+  if (window.plus) {
+    plus.nativeUI.toast(msg, opts)
+    // return true
+  } else if ($plus.requirePlus === false) {
+    console.log('[' + os.name + ']不支持nativeUI的toast方法!')
+    console.log('[toast]\n' + msg)
+    // return false
+  }
+}
+
+/**
+ * 当前Webview窗口的下拉刷新效果
+ * @public
+ * @function pullRefresh
+ * @param {object} [style={}]  Webview窗口下拉刷新样式，参考{@link http://html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewRefreshStyles HTML5+ API}
+ * @param {Function} [callback=(win)=>{}] Webview窗口下拉刷新事件回调,接收的参数为：结束Webview窗口的下拉刷新function
+ * @example &lt;caption>圆圈样式下拉刷新&lt;/caption>
+ * $plus.ui.pullRefresh({
+ *     support: true,
+ *     color: "#2BD009",
+ *     style: "circle",
+ *     offset: "0px",
+ *     range: "80px",
+ *     height: "50px"
+ *   }, function(win) {
+ *     win.endPullToRefresh()
+ *   }
+ * )
+ * @example &lt;caption>经典下拉刷新样式（下拉拖动时页面内容跟随）&lt;/caption>
+ * $plus.ui.pullRefresh({
+ *     support: true,
+ *     style: "default",
+ *     range: "30px",
+ *     height: "30px",
+ *     contentdown: {
+ *       caption: "下拉可以刷新"
+ *     },
+ *     contentover: {
+ *       caption: "释放立即刷新"
+ *     },
+ *     contentrefresh: {
+ *       caption: "正在刷新..."
+ *     }
+ *   }, function(win) {
+ *     win.endPullToRefresh()
+ *   }
+ * );
+ * @example &lt;caption>关闭窗口的下拉刷新功能&lt;/caption>
+ * $plus.ui.pullRefresh({ support: false })
+ * $plus.ui.pullRefresh()
+ */
+ui.pullRefresh = function(style = {}, callback = () => {}) {
+  let win = $plus.win.get()
+  if (window.plus) {
+    win.setPullToRefresh(style, function() {
+      callback(win)
+    })
+  }
+  // 废弃的
+  // let end = () => {}
+  // if (style.suppot) {
+  //   end = () => {
+  //     win.endPullToRefresh()
+  //   }
+  // return new Promise(resolve => {
+  //   win.setPullToRefresh(style, function() {
+  //     resolve(end)
+  //   })
+  // })
+}
+/**
+ * &lt;b> (前提：已设置了下拉刷新效果)&lt;/b>&amp;nbsp;当前窗口调用下拉刷新效果
+ * @public
+ * @function beginPullRefresh
+ * @example &lt;caption>调用拉刷新功能&lt;/caption>
+ * $plus.ui.beginPullRefresh()
+ */
+ui.beginPullRefresh = function() {
+  if (window.plus) {
+    $plus.win.get().beginPullToRefresh()
+  }
+}
+
+if (!window.$plus.ui) {
+  Object.defineProperty(window.$plus, 'ui', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return ui
+    }
+  })
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 10:16:03 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

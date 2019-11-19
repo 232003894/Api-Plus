@@ -716,7 +716,7 @@ dd {
   line-height: 20px;
 }
 dt {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 dd {
   margin-left: 10px;

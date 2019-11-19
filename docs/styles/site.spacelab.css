@@ -1071,8 +1071,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 15px;
   line-height: 1.42857143;
   color: #666;
   background-color: #fff;
@@ -1173,7 +1173,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: #2d2d2d;
@@ -1436,10 +1436,10 @@ dd {
   line-height: 1.42857143;
 }
 dt {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 dd {
-  margin-left: 0;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   .dl-horizontal dt {
@@ -5963,7 +5963,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6081,7 +6081,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;

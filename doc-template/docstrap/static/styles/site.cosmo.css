@@ -1436,10 +1436,10 @@ dd {
   line-height: 1.42857143;
 }
 dt {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 dd {
-  margin-left: 0;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   .dl-horizontal dt {
@@ -3099,7 +3099,7 @@ fieldset[disabled] .btn-default.focus {
   border-color: #222222;
 }
 .btn-default .badge {
-  color: #222222;
+  color: #4d4e53;
   background-color: #fff;
 }
 .btn-primary {

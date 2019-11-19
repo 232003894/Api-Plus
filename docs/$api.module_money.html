@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="$api.module_color.html">$api.color</a></li><li><a href="$api.module_img.html">$api.img</a></li><li><a href="$api.module_linq.html">$api.linq</a></li><li><a href="$api.module_math.html">$api.math</a></li><li><a href="$api.module_money.html">$api.money</a></li><li><a href="$api.module_os.html">$api.os</a></li><li><a href="$api.module_qs.html">$api.qs</a></li><li><a href="$api.module_storage.html">$api.storage</a></li><li><a href="$api.module_string.html">$api.string</a></li><li><a href="$api.module_type.html">$api.type</a></li><li><a href="$plus.module_back.html">$plus.back</a></li><li><a href="$plus.module_clip.html">$plus.clip</a></li><li><a href="$plus.module_img.html">$plus.img</a></li><li><a href="$plus.module_msg.html">$plus.msg</a></li><li><a href="$plus.module_ui.html">$plus.ui</a></li><li><a href="$plus.module_win.html">$plus.win</a></li>
+					<li><a href="$api.module_color.html">$api.color</a></li><li><a href="$api.module_img.html">$api.img</a></li><li><a href="$api.module_linq.html">$api.linq</a></li><li><a href="$api.module_math.html">$api.math</a></li><li><a href="$api.module_money.html">$api.money</a></li><li><a href="$api.module_os.html">$api.os</a></li><li><a href="$api.module_qs.html">$api.qs</a></li><li><a href="$api.module_storage.html">$api.storage</a></li><li><a href="$api.module_string.html">$api.string</a></li><li><a href="$api.module_type.html">$api.type</a></li><li><a href="$api.module_utils.html">$api.utils</a></li><li><a href="$plus.module_back.html">$plus.back</a></li><li><a href="$plus.module_clip.html">$plus.clip</a></li><li><a href="$plus.module_img.html">$plus.img</a></li><li><a href="$plus.module_msg.html">$plus.msg</a></li><li><a href="$plus.module_ui.html">$plus.ui</a></li><li><a href="$plus.module_win.html">$plus.win</a></li>
 				</ul>
 			</li>
 			
@@ -67,7 +67,7 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-9">
 	
 		<div id="main">
 			﻿
@@ -148,7 +148,6 @@
 
         <dl>
             ﻿
-<hr>
 <dt>
     <h4 class="name" id="~formatColumn">formatColumn( [list] [, symbol] [, precision] [, thousand] [, decimal] [, format])</h4>
     
@@ -499,9 +498,9 @@
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
@@ -516,7 +515,7 @@
         
 
     
-        <h5>Example</h5> 
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
     <pre class="sunlight-highlight-javascript">$api.money.formatColumn([123.5, 3456.49, 777888.99, 12345678, -5432], &#x27;$ &#x27;)// 输出的数组[  &#x27;$        123.50&#x27;,  &#x27;$      3,456.49&#x27;,  &#x27;$    777,888.99&#x27;,  &#x27;$ 12,345,678.00&#x27;,  &#x27;$     -5,432.00&#x27;]</pre>
@@ -527,7 +526,6 @@
 
         
             ﻿
-<hr>
 <dt>
     <h4 class="name" id="~formatMoney">formatMoney( [number] [, symbol] [, precision] [, thousand] [, decimal] [, format])</h4>
     
@@ -878,9 +876,9 @@
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
@@ -895,7 +893,7 @@
         
 
     
-        <h5>Examples</h5> 
+        <h5 style="padding-top: 10px;margin-bottom:0;">Examples</h5> 
         <!-- <h5>示例</h5> -->
         
         <p class="code-caption">基本:</p>
@@ -920,7 +918,6 @@
 
         
             ﻿
-<hr>
 <dt>
     <h4 class="name" id="~formatNumber">formatNumber( [number] [, precision] [, thousand] [, decimal])</h4>
     
@@ -1191,9 +1188,9 @@
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
@@ -1208,7 +1205,7 @@
         
 
     
-        <h5>Example</h5> 
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
     <pre class="sunlight-highlight-javascript">$api.money.formatNumber(5318008) // 5,318,008$api.money.formatNumber(9876543.21, 3, &#x27; &#x27;) // 9 876 543.210</pre>
@@ -1219,7 +1216,6 @@
 
         
             ﻿
-<hr>
 <dt>
     <h4 class="name" id="~unformat">unformat(value [, decimal])</h4>
     
@@ -1412,9 +1408,9 @@
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
@@ -1429,7 +1425,7 @@
         
 
     
-        <h5>Example</h5> 
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
     <pre class="sunlight-highlight-javascript">$api.money.unformat(&#x27;£ 12,345,678.90 GBP&#x27;) // 12345678.9$api.money.unformat([&#x27;£ 12,345,678.90 GBP&#x27;,&#x27;$ 5,678.90&#x27;]) // [&quot;12,345,679&quot;,&quot;5,679&quot;]</pre>
@@ -1440,7 +1436,6 @@
 
         
             ﻿
-<hr>
 <dt>
     <h4 class="name" id="~unit">unit( [number] [, units] [, symbol] [, precision] [, thousand] [, decimal] [, format])</h4>
     
@@ -1831,9 +1826,9 @@
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
@@ -1848,7 +1843,7 @@
         
 
     
-        <h5>Examples</h5> 
+        <h5 style="padding-top: 10px;margin-bottom:0;">Examples</h5> 
         <!-- <h5>示例</h5> -->
         
         <p class="code-caption">基本:</p>
@@ -1917,7 +1912,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
 	
-		on Wed Nov 13th 2019
+		on Tue Nov 19th 2019
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

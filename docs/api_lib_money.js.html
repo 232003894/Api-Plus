@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>api/lib/money.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="$api.module_color.html">color</a></li><li><a href="$api.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$api.module_img.html#~base64">base64</a></li><li data-type='method'><a href="$api.module_img.html#~load">load</a></li></ul></li><li><a href="$api.module_linq.html">linq</a></li><li><a href="$api.module_math.html">math</a></li><li><a href="$api.module_money.html">money</a><ul class='methods'><li data-type='method'><a href="$api.module_money.html#~formatColumn">formatColumn</a></li><li data-type='method'><a href="$api.module_money.html#~formatMoney">formatMoney</a></li><li data-type='method'><a href="$api.module_money.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="$api.module_money.html#~unformat">unformat</a></li><li data-type='method'><a href="$api.module_money.html#~unit">unit</a></li></ul></li><li><a href="$api.module_os.html">os</a></li><li><a href="$api.module_qs.html">qs</a></li><li><a href="$api.module_storage.html">storage</a><ul class='methods'><li data-type='method'><a href="$api.module_storage.html#~del">del</a></li><li data-type='method'><a href="$api.module_storage.html#~get">get</a></li><li data-type='method'><a href="$api.module_storage.html#~set">set</a></li></ul></li><li><a href="$api.module_string.html">string</a><ul class='methods'><li data-type='method'><a href="$api.module_string.html#~break">break</a></li><li data-type='method'><a href="$api.module_string.html#~byteLength">byteLength</a></li><li data-type='method'><a href="$api.module_string.html#~clearHtml">clearHtml</a></li><li data-type='method'><a href="$api.module_string.html#~html2Text">html2Text</a></li><li data-type='method'><a href="$api.module_string.html#~unique">unique</a></li></ul></li><li><a href="$api.module_type.html">type</a><ul class='methods'><li data-type='method'><a href="$api.module_type.html#~add">add</a></li><li data-type='method'><a href="$api.module_type.html#~isArray">isArray</a></li><li data-type='method'><a href="$api.module_type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="$api.module_type.html#~isDate">isDate</a></li><li data-type='method'><a href="$api.module_type.html#~isError">isError</a></li><li data-type='method'><a href="$api.module_type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="$api.module_type.html#~isNaN">isNaN</a></li><li data-type='method'><a href="$api.module_type.html#~isNull">isNull</a></li><li data-type='method'><a href="$api.module_type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="$api.module_type.html#~isObject">isObject</a></li><li data-type='method'><a href="$api.module_type.html#~isPlainObject">isPlainObject</a></li><li data-type='method'><a href="$api.module_type.html#~isRegExp">isRegExp</a></li><li data-type='method'><a href="$api.module_type.html#~isString">isString</a></li><li data-type='method'><a href="$api.module_type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="$api.module_type.html#~isWindow">isWindow</a></li></ul></li><li><a href="$plus.module_back.html">back</a><ul class='methods'><li data-type='method'><a href="$plus.module_back.html#~add">add</a></li><li data-type='method'><a href="$plus.module_back.html#~remove">remove</a></li></ul></li><li><a href="$plus.module_clip.html">clip</a><ul class='methods'><li data-type='method'><a href="$plus.module_clip.html#~read">read</a></li><li data-type='method'><a href="$plus.module_clip.html#~write">write</a></li></ul></li><li><a href="$plus.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$plus.module_img.html#~capture">capture</a></li><li data-type='method'><a href="$plus.module_img.html#~compress">compress</a></li><li data-type='method'><a href="$plus.module_img.html#~pick">pick</a></li><li data-type='method'><a href="$plus.module_img.html#~save">save</a></li></ul></li><li><a href="$plus.module_msg.html">msg</a><ul class='methods'><li data-type='method'><a href="$plus.module_msg.html#~send">send</a></li></ul></li><li><a href="$plus.module_ui.html">ui</a><ul class='methods'><li data-type='method'><a href="$plus.module_ui.html#~beginPullRefresh">beginPullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~closeWaiting">closeWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~pullRefresh">pullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~showWaiting">showWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~toast">toast</a></li></ul></li><li><a href="$plus.module_win.html">win</a><ul class='methods'><li data-type='method'><a href="$plus.module_win.html#~all">all</a></li><li data-type='method'><a href="$plus.module_win.html#~close">close</a></li><li data-type='method'><a href="$plus.module_win.html#~create">create</a></li><li data-type='method'><a href="$plus.module_win.html#~get">get</a></li><li data-type='method'><a href="$plus.module_win.html#~getTop">getTop</a></li><li data-type='method'><a href="$plus.module_win.html#~goHome">goHome</a></li><li data-type='method'><a href="$plus.module_win.html#~hide">hide</a></li><li data-type='method'><a href="$plus.module_win.html#~home">home</a></li><li data-type='method'><a href="$plus.module_win.html#~id">id</a></li><li data-type='method'><a href="$plus.module_win.html#~isHome">isHome</a></li><li data-type='method'><a href="$plus.module_win.html#~isTop">isTop</a></li><li data-type='method'><a href="$plus.module_win.html#~menu">menu</a></li><li data-type='method'><a href="$plus.module_win.html#~open">open</a></li><li data-type='method'><a href="$plus.module_win.html#~openBrowser">openBrowser</a></li><li data-type='method'><a href="$plus.module_win.html#~show">show</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="$api.html">$api</a><ul class='methods'><li data-type='method'><a href="$api.html#.mix">mix</a></li></ul></li><li><a href="$plus.html">$plus</a><ul class='methods'><li data-type='method'><a href="$plus.html#.errorPage">errorPage</a></li><li data-type='method'><a href="$plus.html#.winStyle">winStyle</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">api/lib/money.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// NOTE: [api] 调用了 $api.type
+// NOTE: [api] 调用了 $api.math
+/**
+ * &lt;b>一个用于数字、货币和货币解析/格式化的小型JavaScript库，&lt;/b>引用自[accounting.js]{@link https://github.com/openexchangerates/accounting.js}&lt;br/>
+ *
+ * @module money
+ * @memberof $api
+ * @summary 数字、货币解析/格式化的库。
+ */
+import accounting from 'accounting'
+// var accounting = require('accounting')
+
+var money = {}
+
+/**
+ * 默认参数的设置对象
+ * @public
+ * @type {Object}
+ * @example &lt;caption>设置默认参数的设置对象:&lt;/caption>
+ * $api.money.settings = {
+ *  currency: {
+ * 		symbol : '$',   // default currency symbol is '$'
+ * 		format: '%s%v', // controls output: %s = symbol, %v = value/number (can be object: see below)
+ * 		decimal : '.',  // decimal point separator
+ * 		thousand: ',',  // thousands separator
+ * 		precision : 2   // decimal places
+ * 	},
+ * 	number: {
+ * 		precision : 0,  // default precision on numbers is 0
+ * 		thousand: ',',
+ * 		decimal : '.'
+ * 	}
+ * }
+ * @example &lt;caption>可以在外部进行修改库的默认值:&lt;/caption>
+ * $api.money.settings.currency.format = '%s %v'
+ * @example &lt;caption>格式可以是一个对象，具有 `pos`, `neg` and `zero`:&lt;/caption>
+ * $api.money.settings.currency.format = {
+ * 	pos : '%s %v',   // 正数, eg. '$ 1.00' (required)
+ * 	neg : '%s (%v)', // 负数, eg. '$ (1.00)' [optional]
+ * 	zero: '%s  -- '  // 零值, eg. '$  --' [optional]
+ * }
+ */
+money.settings = accounting.settings
+
+/**
+ * 将任何数字格式化为货币
+ * @public
+ * @function formatMoney
+ * @param {number} [number=0] 数值
+ * @param {string} [symbol='$'] 货币符号
+ * @param {number} [precision=2] 小数位精度
+ * @param {string} [thousand=','] 千分位符号
+ * @param {string} [decimal ='.'] 小数点符号
+ * @param {string} [format ='%s%v'] 格式
+ * @returns {string} 格式化的货币字符串
+ * @example &lt;caption>基本:&lt;/caption>
+ * $api.money.formatMoney(12345678) // $12,345,678.00
+ * @example &lt;caption>欧元符号、自定义千分位符号和小数点符号，也可以使用选项对象作为第二参数。:&lt;/caption>
+ * $api.money.formatMoney(4999.99, '€', 2, '.', ',') // €4.999,99
+ * $api.money.formatMoney(4999.99, {symbol: '€', precision: 2, thousand: '.', decimal: ','}) // €4.999,99
+ * @example &lt;caption>负值格式:&lt;/caption>
+ * $api.money.formatMoney(-500000, '£ ', 0) // £ -500,000
+ * @example &lt;caption>简单的“格式”字符串允许控制符号位置（%v＝值，%s＝货币符号）:&lt;/caption>
+ * $api.money.formatMoney(5318008, { symbol: 'GBP',  format: '%v %s' }) // 5,318,008.00 GBP
+ */
+money.formatMoney = accounting.formatMoney
+
+/**
+ * 将数值数组格式化为货币，并格式化为统一长度（中间用空格补足）
+ * @public
+ * @function formatColumn
+ * @param {Array} [list =[]] 数值数组
+ * @param {string} [symbol='$'] 货币符号
+ * @param {number} [precision=2] 小数位精度
+ * @param {string} [thousand=','] 千分位符号
+ * @param {string} [decimal ='.'] 小数点符号
+ * @param {string} [format ='%s%v'] 格式
+ * @returns {Array} 格式化的货币字符串数组
+ * @example
+ * $api.money.formatColumn([123.5, 3456.49, 777888.99, 12345678, -5432], '$ ')
+ * // 输出的数组
+ * [
+ *   '$        123.50',
+ *   '$      3,456.49',
+ *   '$    777,888.99',
+ *   '$ 12,345,678.00',
+ *   '$     -5,432.00'
+ * ]
+ */
+money.formatColumn = accounting.formatColumn
+
+/**
+ * 格式化数字
+ * @public
+ * @function formatNumber
+ * @param {number} [number=0] 数值
+ * @param {number} [precision=2] 小数位精度
+ * @param {string} [thousand=','] 千分位符号
+ * @param {string} [decimal ='.'] 小数点符号
+ * @returns {string} 格式化的字符串
+ * @example
+ * $api.money.formatNumber(5318008) // 5,318,008
+ * $api.money.formatNumber(9876543.21, 3, ' ') // 9 876 543.210
+ */
+money.formatNumber = accounting.formatNumber
+
+/**
+ * 从任何格式化的数字/货币字符串解析为数值
+ * @public
+ * @function unformat
+ * @param {number|string|Array} value 数值,字符串，字符串数值或数值数组
+ * @param {string} [decimal ='.'] 小数点符号
+ * @returns {Array.number} 解析后的数值
+ * @example
+ * $api.money.unformat('£ 12,345,678.90 GBP') // 12345678.9
+ * $api.money.unformat(['£ 12,345,678.90 GBP','$ 5,678.90']) // ["12,345,679","5,679"]
+ */
+money.unformat = accounting.unformat
+
+/**
+ * 单位转换
+ * @public
+ * @function unit
+ * @param {number} [number=0] 数值
+ * @param {Array} [units =['', '万', '亿', '万亿']] 数值数组
+ * @param {string} [symbol='$'] 货币符号
+ * @param {number} [precision=2] 小数位精度
+ * @param {string} [thousand=','] 千分位符号
+ * @param {string} [decimal ='.'] 小数点符号
+ * @param {string} [format ='%s%v'] 格式
+ * @returns {Array} 格式化的货币字符串数组
+ * @example &lt;caption>基本:&lt;/caption>
+ * $api.money.unit(123)        // "$123.00"
+ * $api.money.unit(1234)       // "$0.12万"
+ * $api.money.unit(1234525)    // "$123.45万"
+ * $api.money.unit(12345253)   // "$0.12亿"
+ * $api.money.unit(123452535)  // "$1.23亿"
+ * @example &lt;caption>单位:&lt;/caption>
+ * $api.money.unit(1234525,['元', '万元', '亿元'])        // "$123.45万元"
+ * @example &lt;caption>不传单位，传后面的参数，也可以使用选项对象作为后面参数。:&lt;/caption>
+ * $api.money.unit(1234525, '€', 2, '.', ',')                                                // "€123,45万"
+ * $api.money.unit(1234525, {symbol: '€', precision: 2, thousand: '.', decimal: ','})        // "€123,45万"
+ */
+money.unit = function(
+  number,
+  units,
+  symbol,
+  precision,
+  thousand,
+  decimal,
+  format
+) {
+  if (units === undefined) {
+    units = ['', '万', '亿', '万亿']
+  }
+  var strNumSize = function(tempNum) {
+    var stringNum = tempNum.toString()
+    var index = stringNum.indexOf('.')
+    var newNum = stringNum
+    if (index != -1) {
+      newNum = stringNum.substring(0, index)
+    }
+    return newNum.length
+  }
+  // var
+  var dividend = 10000
+  // FIXME: 引用了 $api.math
+  var curentNum = new $api.math(number) //转换数字
+  if (!$api.type.isUndefined(units) &amp;&amp; !$api.type.isArray(units)) {
+    format = decimal
+    decimal = thousand
+    thousand = precision
+    precision = symbol
+    symbol = units
+    units = ['', '万', '亿', '万亿']
+  }
+  if (!$api.type.isArray(units) || units.length &lt; 1) {
+    units = ['', '万', '亿', '万亿']
+  }
+  var curentUnit = units[0] //转换单位
+  for (var i = 0; i &lt; units.length; i++) {
+    curentUnit = units[i]
+    if (strNumSize(curentNum) &lt; 4) {
+      break
+    }
+    curentNum = curentNum.div(dividend)
+  }
+  var opts = defaults(
+    $api.type.isObject(symbol)
+      ? symbol
+      : {
+          symbol: symbol,
+          precision: precision,
+          thousand: thousand,
+          decimal: decimal,
+          format: format
+        },
+    accounting.settings.currency
+  )
+
+  opts.format = opts.format.replace('%v', '%v' + curentUnit)
+
+  return accounting.formatMoney(curentNum.toNumber(), opts)
+}
+
+function defaults(object, defs) {
+  var key
+  object = object || {}
+  defs = defs || {}
+  // Iterate over object non-prototype properties:
+  for (key in defs) {
+    if (defs.hasOwnProperty(key)) {
+      // Replace values with defaults only if undefined (allow empty/zero values):
+      if (object[key] == null) object[key] = defs[key]
+    }
+  }
+  return object
+}
+
+if (!window.$api.money) {
+  Object.defineProperty(window.$api, 'money', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return money
+    }
+  })
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 10:16:03 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

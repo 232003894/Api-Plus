@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>core/lib/back.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="$api.module_color.html">color</a></li><li><a href="$api.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$api.module_img.html#~base64">base64</a></li><li data-type='method'><a href="$api.module_img.html#~load">load</a></li></ul></li><li><a href="$api.module_linq.html">linq</a></li><li><a href="$api.module_math.html">math</a></li><li><a href="$api.module_money.html">money</a><ul class='methods'><li data-type='method'><a href="$api.module_money.html#~formatColumn">formatColumn</a></li><li data-type='method'><a href="$api.module_money.html#~formatMoney">formatMoney</a></li><li data-type='method'><a href="$api.module_money.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="$api.module_money.html#~unformat">unformat</a></li><li data-type='method'><a href="$api.module_money.html#~unit">unit</a></li></ul></li><li><a href="$api.module_os.html">os</a></li><li><a href="$api.module_qs.html">qs</a></li><li><a href="$api.module_storage.html">storage</a><ul class='methods'><li data-type='method'><a href="$api.module_storage.html#~del">del</a></li><li data-type='method'><a href="$api.module_storage.html#~get">get</a></li><li data-type='method'><a href="$api.module_storage.html#~set">set</a></li></ul></li><li><a href="$api.module_string.html">string</a><ul class='methods'><li data-type='method'><a href="$api.module_string.html#~break">break</a></li><li data-type='method'><a href="$api.module_string.html#~byteLength">byteLength</a></li><li data-type='method'><a href="$api.module_string.html#~clearHtml">clearHtml</a></li><li data-type='method'><a href="$api.module_string.html#~html2Text">html2Text</a></li><li data-type='method'><a href="$api.module_string.html#~unique">unique</a></li></ul></li><li><a href="$api.module_type.html">type</a><ul class='methods'><li data-type='method'><a href="$api.module_type.html#~add">add</a></li><li data-type='method'><a href="$api.module_type.html#~isArray">isArray</a></li><li data-type='method'><a href="$api.module_type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="$api.module_type.html#~isDate">isDate</a></li><li data-type='method'><a href="$api.module_type.html#~isError">isError</a></li><li data-type='method'><a href="$api.module_type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="$api.module_type.html#~isNaN">isNaN</a></li><li data-type='method'><a href="$api.module_type.html#~isNull">isNull</a></li><li data-type='method'><a href="$api.module_type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="$api.module_type.html#~isObject">isObject</a></li><li data-type='method'><a href="$api.module_type.html#~isPlainObject">isPlainObject</a></li><li data-type='method'><a href="$api.module_type.html#~isRegExp">isRegExp</a></li><li data-type='method'><a href="$api.module_type.html#~isString">isString</a></li><li data-type='method'><a href="$api.module_type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="$api.module_type.html#~isWindow">isWindow</a></li></ul></li><li><a href="$plus.module_back.html">back</a><ul class='methods'><li data-type='method'><a href="$plus.module_back.html#~add">add</a></li><li data-type='method'><a href="$plus.module_back.html#~remove">remove</a></li></ul></li><li><a href="$plus.module_clip.html">clip</a><ul class='methods'><li data-type='method'><a href="$plus.module_clip.html#~read">read</a></li><li data-type='method'><a href="$plus.module_clip.html#~write">write</a></li></ul></li><li><a href="$plus.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$plus.module_img.html#~capture">capture</a></li><li data-type='method'><a href="$plus.module_img.html#~compress">compress</a></li><li data-type='method'><a href="$plus.module_img.html#~pick">pick</a></li><li data-type='method'><a href="$plus.module_img.html#~save">save</a></li></ul></li><li><a href="$plus.module_msg.html">msg</a><ul class='methods'><li data-type='method'><a href="$plus.module_msg.html#~send">send</a></li></ul></li><li><a href="$plus.module_ui.html">ui</a><ul class='methods'><li data-type='method'><a href="$plus.module_ui.html#~beginPullRefresh">beginPullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~closeWaiting">closeWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~pullRefresh">pullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~showWaiting">showWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~toast">toast</a></li></ul></li><li><a href="$plus.module_win.html">win</a><ul class='methods'><li data-type='method'><a href="$plus.module_win.html#~all">all</a></li><li data-type='method'><a href="$plus.module_win.html#~close">close</a></li><li data-type='method'><a href="$plus.module_win.html#~create">create</a></li><li data-type='method'><a href="$plus.module_win.html#~get">get</a></li><li data-type='method'><a href="$plus.module_win.html#~getTop">getTop</a></li><li data-type='method'><a href="$plus.module_win.html#~goHome">goHome</a></li><li data-type='method'><a href="$plus.module_win.html#~hide">hide</a></li><li data-type='method'><a href="$plus.module_win.html#~home">home</a></li><li data-type='method'><a href="$plus.module_win.html#~id">id</a></li><li data-type='method'><a href="$plus.module_win.html#~isHome">isHome</a></li><li data-type='method'><a href="$plus.module_win.html#~isTop">isTop</a></li><li data-type='method'><a href="$plus.module_win.html#~menu">menu</a></li><li data-type='method'><a href="$plus.module_win.html#~open">open</a></li><li data-type='method'><a href="$plus.module_win.html#~openBrowser">openBrowser</a></li><li data-type='method'><a href="$plus.module_win.html#~show">show</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="$api.html">$api</a><ul class='methods'><li data-type='method'><a href="$api.html#.mix">mix</a></li></ul></li><li><a href="$plus.html">$plus</a><ul class='methods'><li data-type='method'><a href="$plus.html#.errorPage">errorPage</a></li><li data-type='method'><a href="$plus.html#.winStyle">winStyle</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">core/lib/back.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// NOTE: [plus] 调用了 $api.os
+// NOTE: [plus] 调用了 $api.type
+let hooks = new Set()
+let __back__first = null
+
+let _fisthref = window.location.href
+let endTime = 2000
+
+/**
+ * &lt;b>窗体执行后退（安卓的后退按键）&lt;/b>
+ * @module back
+ * @memberof $plus
+ * @param {boolean} [forceBack=false] - 是否强制退出
+ * @example &lt;caption>窗体后退&lt;/caption>
+ * // 窗体后退
+ * $plus.back()
+ * @summary 窗体后退
+ */
+let back = function(forceBack) {
+  if (forceBack === undefined) {
+    forceBack = false
+  }
+  if (!forceBack) {
+    if (!acts()) {
+      return
+    }
+  }
+  let wobj = $plus.win.get()
+  if (window.plus) {
+    if (wobj.parent()) {
+      // 子窗体
+      $plus.msg.send(
+        '__backbutton',
+        { wid: wobj.id, pid: this.parent.id },
+        { ids: [this.parent.id] }
+      )
+    }
+    wobj.canBack(function(e) {
+      if (e.canBack) {
+        window.history.back()
+      } else {
+        if ($plus.win.isHome(wobj) &amp;&amp; $api.os.android) {
+          if (!__back__first) {
+            __back__first = new Date().getTime()
+            $plus.ui.toast('再按一次退出应用')
+            setTimeout(function() {
+              __back__first = null
+            }, endTime)
+          } else {
+            if (new Date().getTime() - __back__first &lt; endTime) {
+              plus.runtime.quit()
+            }
+          }
+        } else {
+          $plus.win.close(wobj)
+        }
+      }
+    })
+  } else if ($plus.requirePlus === false) {
+    if (window.history.length > 1) {
+      window.history.back()
+    } else {
+      $plus.win.close(wobj)
+    }
+  }
+}
+
+/**
+ * 增加后退执行前的操作
+ * @public
+ * @function add
+ * @param {object} hook - 要增加的操作对象
+ * @param {number} [hook.index=100] - 操作的索引，索引值越小就先执行
+ * @param {function} hook.act - 操作的执行方法，需要执行的操作。&lt;br>执行的返回值默认为true；&lt;br>执行的返回值为false，则中断后续操作。
+ * @returns {object} 操作对象
+ * @example &lt;caption>添加一个可以继续后续操作的操作.&lt;/caption>
+ * let handle = {
+ *   index: 100,
+ *   act() {
+ *     console.log("back  handle");
+ *     return true
+ *   }
+ * };
+ * $plus.back.add(handle)
+ * let handle1 = {
+ *   act() {
+ *     console.log("back  handle1");
+ *   }
+ * };
+ * $plus.back.add(handle1)
+ * @example &lt;caption>添加一个中断后续操作的操作.&lt;/caption>
+ * let handle = {
+ *   index: 9999,
+ *   act() {
+ *     console.log("此路不通，窗体不能关闭！");
+ *     return false
+ *   }
+ * };
+ * $plus.back.add(handle)
+ */
+back.add = function(hook) {
+  if (hook) {
+    if (!$api.type.isNumber(hook.index)) {
+      hook.index = 100
+    }
+    if ($api.type.isFunction(hook.act)) {
+      hooks.add(hook)
+      return hook
+    } else {
+      return null
+    }
+  } else {
+    return null
+  }
+}
+
+/**
+ * 删除后退执行前的操作
+ * @public
+ * @function remove
+ * @param {object} hook - 要删除的操作对象
+ * @returns {object} 操作对象
+ * @example &lt;caption>删除一个声明的操作&lt;/caption>
+ * // 声明hook
+ * let handle = {
+ *   index: 9999,
+ *   act() {
+ *     console.log("此路不通，窗体不能关闭！");
+ *     return false
+ *   }
+ * };
+ * $plus.back.add(handle)
+ * setTimeout(() => {
+ *  $plus.back.remove(handle)
+ * }, 1000);
+ *
+ * // 通过添加获取hook
+ * let handle3 = $plus.back.add({
+ *   index: 9999,
+ *   act() {
+ *     console.log("此路不通，窗体不能关闭！");
+ *     return false
+ *   }
+ * });
+ * setTimeout(() => {
+ *  $plus.back.remove(handle3)
+ * }, 1000);
+ */
+back.remove = function(hook) {
+  if (hook) {
+    hooks.delete(hook)
+    return hook
+  }
+  return null
+}
+
+//遍历执行back的action
+function acts() {
+  let ret = true
+  if (hooks.size > 0) {
+    let _hooks = []
+    for (let _i of hooks) {
+      _hooks.push(_i)
+    }
+    _hooks.sort(function(a, b) {
+      return a.index - b.index
+    })
+    ret = _hooks.every(function(hook, index) {
+      // hook.act() 只要为false就中断后续钩子
+      return hook.act() !== false
+    })
+  }
+  return ret
+}
+
+if (!window.$plus.back) {
+  Object.defineProperty(window.$plus, 'back', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return back
+    }
+  })
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 10:16:03 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

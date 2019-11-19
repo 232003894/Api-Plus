@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>core/lib/clip.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="$api.module_color.html">color</a></li><li><a href="$api.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$api.module_img.html#~base64">base64</a></li><li data-type='method'><a href="$api.module_img.html#~load">load</a></li></ul></li><li><a href="$api.module_linq.html">linq</a></li><li><a href="$api.module_math.html">math</a></li><li><a href="$api.module_money.html">money</a><ul class='methods'><li data-type='method'><a href="$api.module_money.html#~formatColumn">formatColumn</a></li><li data-type='method'><a href="$api.module_money.html#~formatMoney">formatMoney</a></li><li data-type='method'><a href="$api.module_money.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="$api.module_money.html#~unformat">unformat</a></li><li data-type='method'><a href="$api.module_money.html#~unit">unit</a></li></ul></li><li><a href="$api.module_os.html">os</a></li><li><a href="$api.module_qs.html">qs</a></li><li><a href="$api.module_storage.html">storage</a><ul class='methods'><li data-type='method'><a href="$api.module_storage.html#~del">del</a></li><li data-type='method'><a href="$api.module_storage.html#~get">get</a></li><li data-type='method'><a href="$api.module_storage.html#~set">set</a></li></ul></li><li><a href="$api.module_string.html">string</a><ul class='methods'><li data-type='method'><a href="$api.module_string.html#~break">break</a></li><li data-type='method'><a href="$api.module_string.html#~byteLength">byteLength</a></li><li data-type='method'><a href="$api.module_string.html#~clearHtml">clearHtml</a></li><li data-type='method'><a href="$api.module_string.html#~html2Text">html2Text</a></li><li data-type='method'><a href="$api.module_string.html#~unique">unique</a></li></ul></li><li><a href="$api.module_type.html">type</a><ul class='methods'><li data-type='method'><a href="$api.module_type.html#~add">add</a></li><li data-type='method'><a href="$api.module_type.html#~isArray">isArray</a></li><li data-type='method'><a href="$api.module_type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="$api.module_type.html#~isDate">isDate</a></li><li data-type='method'><a href="$api.module_type.html#~isError">isError</a></li><li data-type='method'><a href="$api.module_type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="$api.module_type.html#~isNaN">isNaN</a></li><li data-type='method'><a href="$api.module_type.html#~isNull">isNull</a></li><li data-type='method'><a href="$api.module_type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="$api.module_type.html#~isObject">isObject</a></li><li data-type='method'><a href="$api.module_type.html#~isPlainObject">isPlainObject</a></li><li data-type='method'><a href="$api.module_type.html#~isRegExp">isRegExp</a></li><li data-type='method'><a href="$api.module_type.html#~isString">isString</a></li><li data-type='method'><a href="$api.module_type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="$api.module_type.html#~isWindow">isWindow</a></li></ul></li><li><a href="$plus.module_back.html">back</a><ul class='methods'><li data-type='method'><a href="$plus.module_back.html#~add">add</a></li><li data-type='method'><a href="$plus.module_back.html#~remove">remove</a></li></ul></li><li><a href="$plus.module_clip.html">clip</a><ul class='methods'><li data-type='method'><a href="$plus.module_clip.html#~read">read</a></li><li data-type='method'><a href="$plus.module_clip.html#~write">write</a></li></ul></li><li><a href="$plus.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$plus.module_img.html#~capture">capture</a></li><li data-type='method'><a href="$plus.module_img.html#~compress">compress</a></li><li data-type='method'><a href="$plus.module_img.html#~pick">pick</a></li><li data-type='method'><a href="$plus.module_img.html#~save">save</a></li></ul></li><li><a href="$plus.module_msg.html">msg</a><ul class='methods'><li data-type='method'><a href="$plus.module_msg.html#~send">send</a></li></ul></li><li><a href="$plus.module_ui.html">ui</a><ul class='methods'><li data-type='method'><a href="$plus.module_ui.html#~beginPullRefresh">beginPullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~closeWaiting">closeWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~pullRefresh">pullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~showWaiting">showWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~toast">toast</a></li></ul></li><li><a href="$plus.module_win.html">win</a><ul class='methods'><li data-type='method'><a href="$plus.module_win.html#~all">all</a></li><li data-type='method'><a href="$plus.module_win.html#~close">close</a></li><li data-type='method'><a href="$plus.module_win.html#~create">create</a></li><li data-type='method'><a href="$plus.module_win.html#~get">get</a></li><li data-type='method'><a href="$plus.module_win.html#~getTop">getTop</a></li><li data-type='method'><a href="$plus.module_win.html#~goHome">goHome</a></li><li data-type='method'><a href="$plus.module_win.html#~hide">hide</a></li><li data-type='method'><a href="$plus.module_win.html#~home">home</a></li><li data-type='method'><a href="$plus.module_win.html#~id">id</a></li><li data-type='method'><a href="$plus.module_win.html#~isHome">isHome</a></li><li data-type='method'><a href="$plus.module_win.html#~isTop">isTop</a></li><li data-type='method'><a href="$plus.module_win.html#~menu">menu</a></li><li data-type='method'><a href="$plus.module_win.html#~open">open</a></li><li data-type='method'><a href="$plus.module_win.html#~openBrowser">openBrowser</a></li><li data-type='method'><a href="$plus.module_win.html#~show">show</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="$api.html">$api</a><ul class='methods'><li data-type='method'><a href="$api.html#.mix">mix</a></li></ul></li><li><a href="$plus.html">$plus</a><ul class='methods'><li data-type='method'><a href="$plus.html#.errorPage">errorPage</a></li><li data-type='method'><a href="$plus.html#.winStyle">winStyle</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">core/lib/clip.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// NOTE: [plus] 调用了 $api.os
+/**
+ * &lt;b>剪切板&lt;/b>
+ * @module clip
+ * @memberof $plus
+ * @summary 剪切板
+ */
+
+let clip = {}
+
+let os = $api.os
+
+/**
+ * 写入剪贴板（复制）
+ * @public
+ * @function write
+ * @param {string} txt='' - 复制的字符串
+ * @example
+ * $plus.clip.write("复制的字符串")
+ */
+clip.write = function(txt) {
+  if (txt === undefined) {
+    txt = ''
+  }
+  if (window.plus) {
+    let clip
+    if (os.android) {
+      let Context = window.plus.android.importClass('android.content.Context')
+      let main = window.plus.android.runtimeMainActivity()
+      clip = main.getSystemService(Context.CLIPBOARD_SERVICE)
+      window.plus.android.invoke(clip, 'setText', txt)
+      // plus.android.invoke(clip,"getText");
+    } else if (os.ios) {
+      let UIPasteboard = window.plus.ios.importClass('UIPasteboard')
+      clip = UIPasteboard.generalPasteboard()
+      // clip.setValueforPasteboardType(txt, "public.utf8-plain-text")
+      clip.plusCallMethod({
+        setValue: txt,
+        forPasteboardType: 'public.utf8-plain-text'
+      })
+    }
+  } else if ($plus.requirePlus === false) {
+    console.log('[' + os.name + ']不支持native的$plus.clip.write方法!')
+    // return false
+  }
+}
+
+/**
+ * 读取剪贴板
+ * @public
+ * @function read
+ * @returns {string} 剪贴板内容
+ * @example
+ * $plus.clip.read()
+ */
+clip.read = function() {
+  if (window.plus) {
+    let clip
+    if (os.android) {
+      let Context = window.plus.android.importClass('android.content.Context')
+      let main = window.plus.android.runtimeMainActivity()
+      clip = main.getSystemService(Context.CLIPBOARD_SERVICE)
+      return window.plus.android.invoke(clip, 'getText')
+    } else if (os.ios) {
+      let UIPasteboard = window.plus.ios.importClass('UIPasteboard')
+      clip = UIPasteboard.generalPasteboard()
+      // clip.plusCallMethod({valueForPasteboardType:"public.utf8-plain-text"});
+      return clip.valueForPasteboardType('public.utf8-plain-text')
+    }
+  } else if ($plus.requirePlus === false) {
+    console.log('[' + os.name + ']不支持native的$plus.clip.read方法!')
+  }
+}
+
+if (!window.$plus.clip) {
+  Object.defineProperty(window.$plus, 'clip', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return clip
+    }
+  })
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 10:16:03 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

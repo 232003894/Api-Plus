@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>api/lib/type.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="$api.module_color.html">color</a></li><li><a href="$api.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$api.module_img.html#~base64">base64</a></li><li data-type='method'><a href="$api.module_img.html#~load">load</a></li></ul></li><li><a href="$api.module_linq.html">linq</a></li><li><a href="$api.module_math.html">math</a></li><li><a href="$api.module_money.html">money</a><ul class='methods'><li data-type='method'><a href="$api.module_money.html#~formatColumn">formatColumn</a></li><li data-type='method'><a href="$api.module_money.html#~formatMoney">formatMoney</a></li><li data-type='method'><a href="$api.module_money.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="$api.module_money.html#~unformat">unformat</a></li><li data-type='method'><a href="$api.module_money.html#~unit">unit</a></li></ul></li><li><a href="$api.module_os.html">os</a></li><li><a href="$api.module_qs.html">qs</a></li><li><a href="$api.module_storage.html">storage</a><ul class='methods'><li data-type='method'><a href="$api.module_storage.html#~del">del</a></li><li data-type='method'><a href="$api.module_storage.html#~get">get</a></li><li data-type='method'><a href="$api.module_storage.html#~set">set</a></li></ul></li><li><a href="$api.module_string.html">string</a><ul class='methods'><li data-type='method'><a href="$api.module_string.html#~break">break</a></li><li data-type='method'><a href="$api.module_string.html#~byteLength">byteLength</a></li><li data-type='method'><a href="$api.module_string.html#~clearHtml">clearHtml</a></li><li data-type='method'><a href="$api.module_string.html#~html2Text">html2Text</a></li><li data-type='method'><a href="$api.module_string.html#~unique">unique</a></li></ul></li><li><a href="$api.module_type.html">type</a><ul class='methods'><li data-type='method'><a href="$api.module_type.html#~add">add</a></li><li data-type='method'><a href="$api.module_type.html#~isArray">isArray</a></li><li data-type='method'><a href="$api.module_type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="$api.module_type.html#~isDate">isDate</a></li><li data-type='method'><a href="$api.module_type.html#~isError">isError</a></li><li data-type='method'><a href="$api.module_type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="$api.module_type.html#~isNaN">isNaN</a></li><li data-type='method'><a href="$api.module_type.html#~isNull">isNull</a></li><li data-type='method'><a href="$api.module_type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="$api.module_type.html#~isObject">isObject</a></li><li data-type='method'><a href="$api.module_type.html#~isPlainObject">isPlainObject</a></li><li data-type='method'><a href="$api.module_type.html#~isRegExp">isRegExp</a></li><li data-type='method'><a href="$api.module_type.html#~isString">isString</a></li><li data-type='method'><a href="$api.module_type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="$api.module_type.html#~isWindow">isWindow</a></li></ul></li><li><a href="$plus.module_back.html">back</a><ul class='methods'><li data-type='method'><a href="$plus.module_back.html#~add">add</a></li><li data-type='method'><a href="$plus.module_back.html#~remove">remove</a></li></ul></li><li><a href="$plus.module_clip.html">clip</a><ul class='methods'><li data-type='method'><a href="$plus.module_clip.html#~read">read</a></li><li data-type='method'><a href="$plus.module_clip.html#~write">write</a></li></ul></li><li><a href="$plus.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$plus.module_img.html#~capture">capture</a></li><li data-type='method'><a href="$plus.module_img.html#~compress">compress</a></li><li data-type='method'><a href="$plus.module_img.html#~pick">pick</a></li><li data-type='method'><a href="$plus.module_img.html#~save">save</a></li></ul></li><li><a href="$plus.module_msg.html">msg</a><ul class='methods'><li data-type='method'><a href="$plus.module_msg.html#~send">send</a></li></ul></li><li><a href="$plus.module_ui.html">ui</a><ul class='methods'><li data-type='method'><a href="$plus.module_ui.html#~beginPullRefresh">beginPullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~closeWaiting">closeWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~pullRefresh">pullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~showWaiting">showWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~toast">toast</a></li></ul></li><li><a href="$plus.module_win.html">win</a><ul class='methods'><li data-type='method'><a href="$plus.module_win.html#~all">all</a></li><li data-type='method'><a href="$plus.module_win.html#~close">close</a></li><li data-type='method'><a href="$plus.module_win.html#~create">create</a></li><li data-type='method'><a href="$plus.module_win.html#~get">get</a></li><li data-type='method'><a href="$plus.module_win.html#~getTop">getTop</a></li><li data-type='method'><a href="$plus.module_win.html#~goHome">goHome</a></li><li data-type='method'><a href="$plus.module_win.html#~hide">hide</a></li><li data-type='method'><a href="$plus.module_win.html#~home">home</a></li><li data-type='method'><a href="$plus.module_win.html#~id">id</a></li><li data-type='method'><a href="$plus.module_win.html#~isHome">isHome</a></li><li data-type='method'><a href="$plus.module_win.html#~isTop">isTop</a></li><li data-type='method'><a href="$plus.module_win.html#~menu">menu</a></li><li data-type='method'><a href="$plus.module_win.html#~open">open</a></li><li data-type='method'><a href="$plus.module_win.html#~openBrowser">openBrowser</a></li><li data-type='method'><a href="$plus.module_win.html#~show">show</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="$api.html">$api</a><ul class='methods'><li data-type='method'><a href="$api.html#.mix">mix</a></li></ul></li><li><a href="$plus.html">$plus</a><ul class='methods'><li data-type='method'><a href="$plus.html#.errorPage">errorPage</a></li><li data-type='method'><a href="$plus.html#.winStyle">winStyle</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">api/lib/type.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var type = function(value) {
+  /**
+   * ECMA-262 规范定义了Object.prototype.toString的行为：
+   当调用 toString 方法，采用如下步骤：
+   1. 如果 this 的值是 undefined, 返回 '[object Undefined]'.
+   2. 如果 this 的值是 null, 返回 '[object Null]'.
+   3. 令 O 为以 this 作为参数调用 ToObject 的结果 .
+   4. 令 class 为 O 的 [[Class]] 内部属性的值 .
+   5. 返回三个字符串 '[object ', class, and ']' 连起来的字符串 .
+   利用这个方法，再配合call，我们可以取得任何对象的内部属性[[Class]]，然后把类型检测转化为字符串比较，以达到我们的目的。
+   */
+  // 参考了：https://github.com/nsisodiya/gettypeof/blob/master/index.js
+
+  if (Number.isNaN(value)) {
+    return 'NaN'
+  }
+  var ret = ''
+  try {
+    ret = Object.getPrototypeOf(value).constructor.name.toLocaleLowerCase()
+  } catch (ex) {
+    try {
+      // 参考了：https://github.com/jsmicro/typeof/blob/master/index.js
+      ret = value.constructor.typeof
+        .replace(/^\[object\s(.*)\]$/, '$1')
+        .toLocaleLowerCase()
+    } catch (error) {}
+  }
+  if (!ret) {
+    ret = Object.prototype.toString
+      .call(value)
+      .replace(/^\[object\s(.*)\]$/, '$1')
+      .toLocaleLowerCase()
+  }
+  return ret
+}
+
+/**
+ * 获取对象的类型（boolean，number，string，function，array，date，regexp，object，error，NaN，undefined，null）
+ * @module type
+ * @memberof $api
+ * @param {*} value
+ * @returns {string} 类型名称
+ * @example
+ * // 类型为："string"
+ * $api.type('abc')
+ * @summary 获取类型、类型判断的库
+ */
+
+// #region type
+
+/**
+ * 新增类型
+ * @public
+ * @function add
+ * @param {string} name 类型名称
+ * @param {Object} object 需要注册类型的对象
+ * @example 
+ * class People {
+     constructor() {
+     // Register the object type.
+     $api.type.add('People', this);
+   }
+}
+ */
+type.add = function(name, object) {
+  // 参考了：https://github.com/jsmicro/typeof/blob/master/index.js
+  if ('string' === typeof name &amp;&amp; 'undefined' !== typeof object) {
+    object.constructor.typeof = '[object ' + name + ']'
+  }
+}
+
+/**
+ * 判定是否为字符串
+ * @public
+ * @function isString
+ * @param {*} value
+ * @returns {boolean} 是否为字符串
+ * @example $api.type.isString('abc')
+ */
+type.isString = function(value) {
+  return type(value) === 'string'
+}
+
+/**
+ * 判定是否为数值
+ * @public
+ * @function isNumber
+ * @param {*} value
+ * @returns {boolean} 是否为数值
+ * @example $api.type.isNumber(123)
+ */
+type.isNumber = function(value) {
+  return type(value) === 'number'
+}
+
+/**
+ * 判定是否为布尔
+ * @public
+ * @function isBoolean
+ * @param {*} value
+ * @returns {boolean} 是否为布尔
+ * @example $api.type.isBoolean('1'==='2')
+ */
+type.isBoolean = function(value) {
+  return type(value) === 'boolean'
+}
+
+/**
+ * 判定是否为正则
+ * @public
+ * @function isRegExp
+ * @param {*} value
+ * @returns {boolean} 是否为正则
+ * @example $api.type.isRegExp(new RegExp())
+ */
+type.isRegExp = function(value) {
+  return type(value) === 'regexp'
+}
+
+/**
+ * 判定是否为一个函数
+ * @public
+ * @function isFunction
+ * @param {*} value
+ * @returns {boolean} 是否为一个函数
+ * @example $api.type.isFunction(function(){})
+ */
+type.isFunction = function(value) {
+  return type(value) === 'function'
+}
+
+/**
+ * 判定是否为日期
+ * @public
+ * @function isDate
+ * @param {*} value
+ * @returns {boolean} 是否为日期
+ * @example $api.type.isDate(new Date())
+ */
+type.isDate = function(value) {
+  return type(value) === 'date'
+}
+
+/**
+ * 判定是否为数组
+ * @public
+ * @function isArray
+ * @param {*} value
+ * @returns {boolean} 是否为数组
+ * @example $api.type.isArray([])
+ */
+type.isArray = function isArray(value) {
+  return type(value) === 'array'
+}
+
+/**
+ * 判定是否为错误
+ * @public
+ * @function isError
+ * @param {*} value
+ * @returns {boolean} 是否为错误
+ * @example $api.type.isError(new Error())
+ */
+type.isError = function(value) {
+  return type(value) === 'error'
+}
+
+/**
+ * 判定是否为NaN
+ * @public
+ * @function isNaN
+ * @param {*} value
+ * @returns {boolean} 是否为NaN
+ * @example $api.type.isNaN(Number.NaN)
+ */
+type.isNaN = function(value) {
+  return type(value) === 'NaN'
+}
+
+/**
+ * 判定是否为undefined
+ * @public
+ * @function isUndefined
+ * @param {*} value
+ * @returns {boolean} 是否为undefined
+ * @example $api.type.isUndefined()
+ */
+type.isUndefined = function(value) {
+  return type(value) === 'undefined'
+}
+
+/**
+ * 判定是否为null
+ * @public
+ * @function isNull
+ * @param {*} value
+ * @returns {boolean} 是否为null
+ * @example $api.type.isNull(null)
+ */
+type.isNull = function(value) {
+  return type(value) === 'null'
+}
+
+/**
+ * 判定是否为一个对象
+ * @public
+ * @function isObject
+ * @param {*} value
+ * @returns {boolean} 是否为一个对象
+ * @example $api.type.isObject({})
+ */
+type.isObject = function(value) {
+  return typeof value === 'object'
+}
+
+/**
+ * 判定是否为一个window对象
+ * @public
+ * @function isWindow
+ * @param {*} value
+ * @returns {boolean} 是否为一个window对象
+ * @example $api.type.isWindow(window)
+ */
+type.isWindow = function(value) {
+  return value != null &amp;&amp; value === value.window
+}
+
+/**
+ * 判定是否为一个纯净的JS对象,指由Object构造器生成的对象,不能为window, 任何类(包括自定义类)的实例,元素节点,文本节点
+ * @public
+ * @function isPlainObject
+ * @param {*} value
+ * @returns {boolean} 是否为一个纯净的JS对象
+ * @example $api.type.isPlainObject({})
+ */
+type.isPlainObject = function(value) {
+  return (
+    !type.isNull(value) &amp;&amp;
+    type.isObject(value) &amp;&amp;
+    !type.isWindow(value) &amp;&amp;
+    Object.getPrototypeOf(value) === Object.prototype
+  )
+}
+
+//  #endregion
+
+if (!window.$api.type) {
+  Object.defineProperty(window.$api, 'type', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return type
+    }
+  })
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 10:16:03 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

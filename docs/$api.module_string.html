@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="$api.module_color.html">$api.color</a></li><li><a href="$api.module_img.html">$api.img</a></li><li><a href="$api.module_linq.html">$api.linq</a></li><li><a href="$api.module_math.html">$api.math</a></li><li><a href="$api.module_money.html">$api.money</a></li><li><a href="$api.module_os.html">$api.os</a></li><li><a href="$api.module_qs.html">$api.qs</a></li><li><a href="$api.module_storage.html">$api.storage</a></li><li><a href="$api.module_string.html">$api.string</a></li><li><a href="$api.module_type.html">$api.type</a></li><li><a href="$plus.module_back.html">$plus.back</a></li><li><a href="$plus.module_clip.html">$plus.clip</a></li><li><a href="$plus.module_img.html">$plus.img</a></li><li><a href="$plus.module_msg.html">$plus.msg</a></li><li><a href="$plus.module_ui.html">$plus.ui</a></li><li><a href="$plus.module_win.html">$plus.win</a></li>
+					<li><a href="$api.module_color.html">$api.color</a></li><li><a href="$api.module_img.html">$api.img</a></li><li><a href="$api.module_linq.html">$api.linq</a></li><li><a href="$api.module_math.html">$api.math</a></li><li><a href="$api.module_money.html">$api.money</a></li><li><a href="$api.module_os.html">$api.os</a></li><li><a href="$api.module_qs.html">$api.qs</a></li><li><a href="$api.module_storage.html">$api.storage</a></li><li><a href="$api.module_string.html">$api.string</a></li><li><a href="$api.module_type.html">$api.type</a></li><li><a href="$api.module_utils.html">$api.utils</a></li><li><a href="$plus.module_back.html">$plus.back</a></li><li><a href="$plus.module_clip.html">$plus.clip</a></li><li><a href="$plus.module_img.html">$plus.img</a></li><li><a href="$plus.module_msg.html">$plus.msg</a></li><li><a href="$plus.module_ui.html">$plus.ui</a></li><li><a href="$plus.module_win.html">$plus.win</a></li>
 				</ul>
 			</li>
 			
@@ -67,7 +67,7 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-9">
 	
 		<div id="main">
 			﻿
@@ -328,28 +328,8 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>blacklist(input, chars)</strong></td>
-<td>remove characters that appear in the blacklist. The characters are used in a RegExp  * and so you will need to escape some chars, e.g. <code>blacklist(input, '\\[\\]')</code>.</td>
-</tr>
-<tr>
-<td><strong>escape(input)</strong></td>
-<td>replace <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>'</code>, <code>&quot;</code> and <code>/</code> with HTML entities.</td>
-</tr>
-<tr>
-<td><strong>unescape(input)</strong></td>
-<td>replaces HTML encoded entities with <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>'</code>, <code>&quot;</code> and <code>/</code>.</td>
-</tr>
-<tr>
-<td><strong>ltrim(input [, chars])</strong></td>
-<td>trim characters from the left-side of the input.</td>
-</tr>
-<tr>
 <td><strong>normalizeEmail(email [, options])</strong></td>
 <td>canonicalizes an email address. (This doesn't validate that the input is an email, if  * you want to validate the email use isEmail beforehand)<br/><br/><code>options</code> is an object with the following keys and default  * values:<br/><ul><li><em>all_lowercase: true</em> - Transforms the local part (before the @ symbol) of all email addresses to  * lowercase. Please note that this may violate RFC 5321, which gives providers the possibility to treat the local part of email  * addresses in a case sensitive way (although in practice most - yet not all - providers don't). The domain part of the email  * address is always lowercased, as it's case insensitive per RFC 1035.</li><li><em>gmail_lowercase: true</em> - GMail addresses are  * known to be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set to false. Please note  * that when <em>all_lowercase</em> is true, GMail addresses are lowercased regardless of the value of this  * setting.</li><li><em>gmail_remove_dots: true</em>: Removes dots from the local part of the email address, as GMail ignores them (e.g.  * &quot;john.doe&quot; and &quot;johndoe&quot; are considered equal).</li><li><em>gmail_remove_subaddress: true</em>: Normalizes addresses by removing  * &quot;sub-addresses&quot;, which is the part following a &quot;+&quot; sign (e.g. &quot;foo+bar@gmail.com&quot; becomes &quot;foo@gmail.com&quot;) * .</li><li><em>gmail_convert_googlemaildotcom: true</em>: Converts addresses with domain @googlemail.com to @gmail.com, as they're  * equivalent.</li><li><em>outlookdotcom_lowercase: true</em> - Outlook.com addresses (including Windows Live and Hotmail) are known to  * be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set to false. Please note that when  * <em>all_lowercase</em> is true, Outlook.com addresses are lowercased regardless of the value of this  * setting.</li><li><em>outlookdotcom_remove_subaddress: true</em>: Normalizes addresses by removing &quot;sub-addresses&quot;, which is the part  * following a &quot;+&quot; sign (e.g. &quot;foo+bar@outlook.com&quot; becomes &quot;foo@outlook.com&quot;).</li><li><em>yahoo_lowercase: true</em> - Yahoo Mail  * addresses are known to be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set to false.  * Please note that when <em>all_lowercase</em> is true, Yahoo Mail addresses are lowercased regardless of the value of this  * setting.</li><li><em>yahoo_remove_subaddress: true</em>: Normalizes addresses by removing &quot;sub-addresses&quot;, which is the part  * following a &quot;-&quot; sign (e.g. &quot;foo-bar@yahoo.com&quot; becomes &quot;foo@yahoo.com&quot;).</li><li><em>icloud_lowercase: true</em> - iCloud addresses  * (including MobileMe) are known to be case-insensitive, so this switch allows lowercasing them even when <em>all_lowercase</em> is set  * to false. Please note that when <em>all_lowercase</em> is true, iCloud addresses are lowercased regardless of the value of this  * setting.</li><li><em>icloud_remove_subaddress: true</em>: Normalizes addresses by removing &quot;sub-addresses&quot;, which is the part  * following a &quot;+&quot; sign (e.g. &quot;foo+bar@icloud.com&quot; becomes &quot;foo@icloud.com&quot;).</li></ul></td>
-</tr>
-<tr>
-<td><strong>rtrim(input [, chars])</strong></td>
-<td>trim characters from the right-side of the input.</td>
 </tr>
 <tr>
 <td><strong>stripLow(input [, keep_new_lines])</strong></td>
@@ -370,14 +350,6 @@
 <tr>
 <td><strong>toInt(input [, radix])</strong></td>
 <td>convert the input string to an integer, or <code>NaN</code> if the input is not an integer.</td>
-</tr>
-<tr>
-<td><strong>trim(input [, chars])</strong></td>
-<td>trim characters (whitespace by default) from both sides of the input.</td>
-</tr>
-<tr>
-<td><strong>whitelist(input, chars)</strong></td>
-<td>remove characters that do not appear in the whitelist. The characters are used in a  * RegExp and so you will need to escape some chars, e.g. <code>whitelist(input, '\\[\\]')</code>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -444,7 +416,191 @@
 
         <dl>
             ﻿
-<hr>
+<dt>
+    <h4 class="name" id="~blacklist">blacklist(input, chars)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>删除出现在黑名单中的字符。字符在RegExp中使用，因此需要转义一些字符，比如'['转义符'\['</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>chars</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>黑名单字符</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot;abc[def]g&quot;$api.string.blacklist(input, &#x27;\\[\\]&#x27;)$api.string.blacklist(input, [&#x27;\\[&#x27;,&#x27;\\]&#x27;])// 输出：&quot;abcdef]g&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
 <dt>
     <h4 class="name" id="~break">break(txt [, lineLength] [, lineBreak])</h4>
     
@@ -499,7 +655,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
 
@@ -575,7 +731,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
 
@@ -666,18 +822,18 @@
     
             
 <div class="param-desc">
-    <p>换行处理过的字符串</p>
+    <p>换行处理过的字符串的复制</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
 
@@ -688,13 +844,19 @@
         
 
     
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var txt = &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;$api.string.break(txt ,5 ,&quot;&lt;br/&gt;&quot;)// 输出：&quot;aaaaa&lt;br/&gt;aaaaa&lt;br/&gt;aaaaa&lt;br/&gt;aaaaa&lt;br/&gt;aaaaa&lt;br/&gt;aaaaa&lt;br/&gt;aa&quot;$api.string.break(txt ,5 )// 输出&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;</pre>
+
+
+    
 </dd>
 
         
             ﻿
-<hr>
 <dt>
-    <h4 class="name" id="~clearHtml">clearHtml(html)</h4>
+    <h4 class="name" id="~byteLength">byteLength(str)</h4>
     
     
 </dt>
@@ -702,7 +864,323 @@
 
     
     <div class="description">
-        <p>去html标签</p>
+        <p>计算字符串的字节长度（双字节按照2个长度计算）</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>字符串字节长度</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var str =&quot;关于A&quot;$api.string.byteLength(str)// 输出: 5</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~escape">escape(input)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>转义html标签</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot;&lt;br/&gt;&quot;$api.string.escape(input)// 输出：&quot;&amp;lt;br&amp;#x2F;&amp;gt;&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~html2Text">html2Text(html)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>html转换成文本</p>
     </div>
     
 
@@ -818,14 +1296,14 @@
     
             
 <div class="param-desc">
-    <p>去html标签的字符串</p>
+    <p>去html格式的纯文本的复制</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
-        Type
+        Type:
     </dt>
     <dd>
         
@@ -838,6 +1316,1076 @@
 
 
         
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var html = &#x27;&lt;a href=&quot;#/about&quot; class=&quot;&quot; data-v-91154714=&quot;&quot;&gt;关于&lt;/a&gt;&#x27;$api.string.html2Text(html)// 输出: &quot;关于&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~ltrim">ltrim(input [, chars])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>去前导空格</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>chars</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可选><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>需要去掉的字符，默认是空白字符</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot; abc[def]g &quot;$api.string.ltrim(input)// 输出：&quot;abc[def]g &quot;input =&quot;[def]g&quot;$api.string.ltrim(input,[&#x27;[&#x27;,&#x27;d&#x27;])// 输出：&quot;ef]&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~rtrim">rtrim(input [, chars])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>去后导空格</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>chars</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可选><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>需要去掉的字符，默认是空白字符</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot; abc[def]g &quot;$api.string.rtrim(input)// 输出：&quot; abc[def]g&quot;input =&quot;[def]g&quot;$api.string.rtrim(input,&#x27;\\g\\]&#x27;)// 输出：&quot;def]&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~trim">trim(input [, chars])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>去头尾空格</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>chars</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可选><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>需要去掉的字符，默认是空白字符</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot; abc[def]g &quot;$api.string.trim(input)// 输出：&quot;abc[def]g&quot;input =&quot;[def]g&quot;$api.string.trim(input,[&#x27;[&#x27;,&#x27;g&#x27;])// 输出：&quot;def]&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~unescape">unescape(input)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>反转义html标签</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot;&amp;lt;br&amp;#x2F;&amp;gt;&quot;$api.string.unescape(input)// 输出：&quot;&lt;br/&gt;&quot;</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~unique">unique()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>随机唯一码</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>唯一码</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.string.unique()</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~whitelist">whitelist(input, chars)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>删除未出现在白名单中的字符。字符在RegExp中使用，因此需要转义一些字符，比如'['转义符'\['</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>chars</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>黑名单字符</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回处理后的字符串的复制</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">var input =&quot;abc[def]g&quot;$api.string.whitelist(input, &#x27;\\[&#x27;)$api.string.whitelist(input, [&#x27;\\[&#x27;,&#x27;\\]&#x27;])// 输出：&quot;[&quot;</pre>
+
 
     
 </dd>
@@ -892,7 +2440,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
 	
-		on Wed Nov 13th 2019
+		on Tue Nov 19th 2019
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

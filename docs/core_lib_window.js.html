@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>core/lib/window.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="$api.module_color.html">color</a></li><li><a href="$api.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$api.module_img.html#~base64">base64</a></li><li data-type='method'><a href="$api.module_img.html#~load">load</a></li></ul></li><li><a href="$api.module_linq.html">linq</a></li><li><a href="$api.module_math.html">math</a></li><li><a href="$api.module_money.html">money</a><ul class='methods'><li data-type='method'><a href="$api.module_money.html#~formatColumn">formatColumn</a></li><li data-type='method'><a href="$api.module_money.html#~formatMoney">formatMoney</a></li><li data-type='method'><a href="$api.module_money.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="$api.module_money.html#~unformat">unformat</a></li><li data-type='method'><a href="$api.module_money.html#~unit">unit</a></li></ul></li><li><a href="$api.module_os.html">os</a></li><li><a href="$api.module_qs.html">qs</a></li><li><a href="$api.module_storage.html">storage</a><ul class='methods'><li data-type='method'><a href="$api.module_storage.html#~del">del</a></li><li data-type='method'><a href="$api.module_storage.html#~get">get</a></li><li data-type='method'><a href="$api.module_storage.html#~set">set</a></li></ul></li><li><a href="$api.module_string.html">string</a><ul class='methods'><li data-type='method'><a href="$api.module_string.html#~break">break</a></li><li data-type='method'><a href="$api.module_string.html#~byteLength">byteLength</a></li><li data-type='method'><a href="$api.module_string.html#~clearHtml">clearHtml</a></li><li data-type='method'><a href="$api.module_string.html#~html2Text">html2Text</a></li><li data-type='method'><a href="$api.module_string.html#~unique">unique</a></li></ul></li><li><a href="$api.module_type.html">type</a><ul class='methods'><li data-type='method'><a href="$api.module_type.html#~add">add</a></li><li data-type='method'><a href="$api.module_type.html#~isArray">isArray</a></li><li data-type='method'><a href="$api.module_type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="$api.module_type.html#~isDate">isDate</a></li><li data-type='method'><a href="$api.module_type.html#~isError">isError</a></li><li data-type='method'><a href="$api.module_type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="$api.module_type.html#~isNaN">isNaN</a></li><li data-type='method'><a href="$api.module_type.html#~isNull">isNull</a></li><li data-type='method'><a href="$api.module_type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="$api.module_type.html#~isObject">isObject</a></li><li data-type='method'><a href="$api.module_type.html#~isPlainObject">isPlainObject</a></li><li data-type='method'><a href="$api.module_type.html#~isRegExp">isRegExp</a></li><li data-type='method'><a href="$api.module_type.html#~isString">isString</a></li><li data-type='method'><a href="$api.module_type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="$api.module_type.html#~isWindow">isWindow</a></li></ul></li><li><a href="$plus.module_back.html">back</a><ul class='methods'><li data-type='method'><a href="$plus.module_back.html#~add">add</a></li><li data-type='method'><a href="$plus.module_back.html#~remove">remove</a></li></ul></li><li><a href="$plus.module_clip.html">clip</a><ul class='methods'><li data-type='method'><a href="$plus.module_clip.html#~read">read</a></li><li data-type='method'><a href="$plus.module_clip.html#~write">write</a></li></ul></li><li><a href="$plus.module_img.html">img</a><ul class='methods'><li data-type='method'><a href="$plus.module_img.html#~capture">capture</a></li><li data-type='method'><a href="$plus.module_img.html#~compress">compress</a></li><li data-type='method'><a href="$plus.module_img.html#~pick">pick</a></li><li data-type='method'><a href="$plus.module_img.html#~save">save</a></li></ul></li><li><a href="$plus.module_msg.html">msg</a><ul class='methods'><li data-type='method'><a href="$plus.module_msg.html#~send">send</a></li></ul></li><li><a href="$plus.module_ui.html">ui</a><ul class='methods'><li data-type='method'><a href="$plus.module_ui.html#~beginPullRefresh">beginPullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~closeWaiting">closeWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~pullRefresh">pullRefresh</a></li><li data-type='method'><a href="$plus.module_ui.html#~showWaiting">showWaiting</a></li><li data-type='method'><a href="$plus.module_ui.html#~toast">toast</a></li></ul></li><li><a href="$plus.module_win.html">win</a><ul class='methods'><li data-type='method'><a href="$plus.module_win.html#~all">all</a></li><li data-type='method'><a href="$plus.module_win.html#~close">close</a></li><li data-type='method'><a href="$plus.module_win.html#~create">create</a></li><li data-type='method'><a href="$plus.module_win.html#~get">get</a></li><li data-type='method'><a href="$plus.module_win.html#~getTop">getTop</a></li><li data-type='method'><a href="$plus.module_win.html#~goHome">goHome</a></li><li data-type='method'><a href="$plus.module_win.html#~hide">hide</a></li><li data-type='method'><a href="$plus.module_win.html#~home">home</a></li><li data-type='method'><a href="$plus.module_win.html#~id">id</a></li><li data-type='method'><a href="$plus.module_win.html#~isHome">isHome</a></li><li data-type='method'><a href="$plus.module_win.html#~isTop">isTop</a></li><li data-type='method'><a href="$plus.module_win.html#~menu">menu</a></li><li data-type='method'><a href="$plus.module_win.html#~open">open</a></li><li data-type='method'><a href="$plus.module_win.html#~openBrowser">openBrowser</a></li><li data-type='method'><a href="$plus.module_win.html#~show">show</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="$api.html">$api</a><ul class='methods'><li data-type='method'><a href="$api.html#.mix">mix</a></li></ul></li><li><a href="$plus.html">$plus</a><ul class='methods'><li data-type='method'><a href="$plus.html#.errorPage">errorPage</a></li><li data-type='method'><a href="$plus.html#.winStyle">winStyle</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">core/lib/window.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// NOTE: [plus] 调用了 $api.os
+// NOTE: [plus] 调用了 $api.qs
+// NOTE: [plus] 调用了 $api.mix
+// NOTE: [plus] 调用了 $api.type
+/**
+ * &lt;b>窗口&lt;/b>
+ * @module win
+ * @memberof $plus
+ * @summary 窗口
+ */
+
+let win = {}
+
+let os = $api.os
+let qs = $api.qs
+
+// #region 常量
+
+// 默认打开窗口样式配置
+let defaultWin = {
+  scalable: false,
+  bounce: '',
+  plusrequire: 'ahead',
+  // background: 'transparent',
+  softinputMode: 'adjustPan'
+}
+// 默认窗口显示配置
+let defaultShow = {
+  duration: os.ios ? 300 : 200,
+  aniShow: 'slide-in-right'
+}
+// 默认窗口隐藏配置
+let defaultHide = {
+  duration: os.ios ? 450 : 300,
+  aniHide: 'slide-out-right'
+}
+// #endregion
+
+// #region 私有辅助方法
+
+/*
+ * 构建 window id
+ * @param {String} url url
+ * @param {Object} ext 扩展参数
+ */
+function getId(url, ext) {
+  let tmp = url.split('?')
+  let opt = {}
+  if (tmp.length > 1) {
+    opt = $api.mix(true, opt, qs.parse(tmp[tmp.length - 1]), ext)
+  } else {
+    opt = $api.mix(true, opt, ext)
+  }
+  let _qs = qs.stringify(opt)
+  if (_qs) {
+    _qs = '?' + _qs
+  }
+  return tmp[0] + _qs
+}
+
+/*
+ * 组装 window url
+ * @param {String} url url
+ * @param {Object} ext 扩展参数
+ * @param {String} id 页面id
+ */
+function getUrl(url, ext, id) {
+  let tmp = url.split('?')
+  let opt = {}
+  if (tmp.length > 1) {
+    opt = $api.mix(true, opt, qs.parse(tmp[tmp.length - 1]), ext)
+  } else {
+    opt = $api.mix(true, opt, ext)
+  }
+  if (!id) {
+    id = getId(url, ext)
+  }
+  opt = $api.mix(true, opt, { _id: id })
+  let _qs = qs.stringify(opt)
+  if (_qs) {
+    _qs = '?' + _qs
+  }
+  return { url: tmp[0] + _qs, id: id }
+}
+// #endregion
+// #region $plus.win 公共辅助方法
+/**
+ * 获取所有窗口
+ * @public
+ * @function all
+ * @returns {Array} 窗体列表
+ * @example
+ * $plus.win.all()
+ */
+win.all = function() {
+  if (window.plus) {
+    return plus.webview.all()
+  } else if ($plus.requirePlus === false) {
+    return [...window.mainWin.__all_wins]
+  }
+}
+/**
+ * 获取窗体
+ * @public
+ * @function get
+ * @param {string|window|WebviewObject} w - 窗体对象或窗体id
+ * @returns {window|WebviewObject} 窗体对象
+ * @example
+ * // 取得当前窗体
+ * $plus.win.get()
+ * // 获取id为‘login’的窗体
+ * $plus.win.get('login')
+ */
+win.get = function(w) {
+  let _win = null
+  if (window.plus) {
+    if ($api.type.isUndefined(w)) {
+      _win = plus.webview.currentWebview()
+    } else if ($api.type.isObject(w) &amp;&amp; w.draw) {
+      _win = w
+    } else if ($api.type.isString(w)) {
+      _win = plus.webview.getWebviewById(w)
+    }
+  } else if ($plus.requirePlus === false) {
+    if ($api.type.isString(w)) {
+      let views = []
+      for (let _i of mainWin.__all_wins) {
+        views.push(_i)
+      }
+      _win = views.find(function(item, index, arr) {
+        return item._id === w
+      })
+    } else if ($api.type.isWindow(w)) {
+      _win = w
+    }
+    if (!_win) {
+      _win = window
+    }
+  }
+  return _win
+}
+/**
+ * 获取窗体的id,兼容web和plus
+ * @public
+ * @function id
+ * @param {string|window|WebviewObject} w - 窗体对象或窗体id
+ * @returns {string} 窗体对象
+ * @example
+ * $plus.win.id()
+ */
+win.id = function(w) {
+  if (window.plus) {
+    if (win.get(w)) {
+      return win.get(w).id
+    } else {
+      return ''
+    }
+  } else {
+    if (win.get(w)) {
+      return win.get(w)._id
+    } else {
+      return ''
+    }
+  }
+}
+// #endregion
+
+// #region $plus.win 主页相关方法
+/**
+ * 获取home窗体
+ * @public
+ * @function home
+ * @returns {window|WebviewObject} 窗体对象
+ * @example
+ * $plus.win.home()
+ */
+win.home = function() {
+  if (window.plus) {
+    return plus.webview.getLaunchWebview()
+  } else if ($plus.requirePlus === false) {
+    return window.mainWin
+  }
+}
+/**
+ * 到首页
+ * @public
+ * @function goHome
+ * @return {Promise}
+ * @example
+ * $plus.win.goHome().then((w)=>{
+ *   // w为窗体对象
+ * })
+ */
+win.goHome = function() {
+  return win.show(win.home())
+}
+
+/**
+ * 是否主页
+ * @public
+ * @function isHome
+ * @param {string|window|WebviewObject} w
+ * @returns {boolean} 是不是主页
+ * @example
+ * // 当前窗体是否是主页
+ * $plus.win.isHome()
+ */
+win.isHome = function(w) {
+  w = win.get(w)
+  if (!w) {
+    return false
+  }
+  if (window.plus) {
+    return w.id === window.plus.runtime.appid
+  } else if ($plus.requirePlus === false) {
+    return w.mainWin === window
+  }
+}
+
+// #endregion
+
+// #region $plus.win top相关方法
+
+/**
+ * 获取顶层窗口
+ * @public
+ * @function getTop
+ * @example
+ * $plus.win.goHome()
+ */
+win.getTop = function() {
+  if (window.plus) {
+    return plus.webview.getTopWebview()
+  }
+}
+
+/**
+ * 是否顶层窗口
+ * @public
+ * @function isTop
+ * @param {String|window|WebviewObject} w
+ * @returns {Boolean} 是不是顶层窗口
+ * @example
+ * // 当前窗体是否顶层窗口
+ * $plus.win.isTop()
+ */
+win.isTop = function(w) {
+  w = win.get(w)
+  if (!w) {
+    return false
+  }
+  if (window.plus) {
+    return win.getTop().id === w.id
+  } else if ($plus.requirePlus === false) {
+    return !(w.document.hidden || w.document.webkitHidden)
+  }
+}
+// #endregion
+
+// #region $plus.win 公共方法
+
+/**
+ * 创建新窗口
+ * @public
+ * @function create
+ * @param {string} url - 新窗口加载的HTML页面地址
+ * @param {string} [id] - 新窗口的标识
+ * @param {object} [opts] - 参数
+ * @param {JSON} [opts.ext] - 创建窗口的额外扩展参数，设置扩展参数后可以直接通过窗口对象的点（“.”）操作符获取扩展参数属性值。
+ * @param {object} [opts.style] - 创建窗口的样式（如窗口宽、高、位置等信息），参考{@link http://html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyles HTML5+ API}。
+ * @returns {window|WebviewObject} 窗体对象
+ * @example
+ * $plus.win.create('login.html')
+ */
+win.create = function(url = '', id = '', opts = { ext: {}, style: {} }) {
+  // if (url === undefined) {
+  //   url = ''
+  // }
+  // if (id === undefined) {
+  //   id = ''
+  // }
+  // if (opts === undefined) {
+  //   opts = { ext: {}, style: {} }
+  // }
+  // if (opts.ext === undefined) {
+  //   opts.ext = {}
+  // }
+  // if (opts.style === undefined) {
+  //   opts.style = {}
+  // }
+
+  let webview = null
+  if (!url) {
+    return webview
+  }
+  if (!opts) {
+    opts = { ext: {}, style: {} }
+  }
+  if (!opts.ext) {
+    opts.ext = {}
+  }
+  if (!opts.style) {
+    opts.style = {}
+  }
+  if (window.plus) {
+    if (!id) {
+      id = getId(url, opts.ext)
+    }
+    webview = plus.webview.getWebviewById(id)
+    if (!webview) {
+      // 不存在
+      webview = plus.webview.create(
+        url,
+        id,
+        $api.mix(true, {}, defaultWin, opts.style),
+        opts.ext
+      )
+    }
+    return webview
+  } else if ($plus.requirePlus === false) {
+    return webview
+  }
+}
+
+/**
+ * 隐藏窗体
+ * @public
+ * @function hide
+ * @param {string|window|WebviewObject} w - 窗体对象或窗体id
+ * @param {object} [hideOpts] - 隐藏参数
+ * @param {string} [hideOpts.aniHide='none'|'auto'] - 隐藏窗口的动画效果,非显示栈顶的窗口的默认值为'none'
+ * @param {number} [hideOpts.duration=300] - 隐藏窗口动画的持续时间
+ * @example
+ * // 根据id隐藏
+ * $plus.win.hide('login')
+ */
+win.hide = function(w, hideOpts = {}) {
+  // if (hideOpts === undefined) {
+  //   hideOpts = {}
+  // }
+  w = win.get(w)
+  if (!w) {
+    console.error('[hide方法] 类型{String|window|WebviewObject}参数w不能为空!')
+    return
+  }
+  if (window.plus) {
+    // 首页不隐藏
+    if (win.isHome(w)) {
+      return
+    }
+    let _Opt = { duration: defaultHide.duration }
+    if (hideOpts.duration || hideOpts.aniHide) {
+      _Opt = $api.mix(true, {}, defaultHide, hideOpts)
+    }
+    if (!win.isTop(w)) {
+      w.hide('none', _Opt.duration)
+    } else {
+      w.hide(_Opt.aniHide || 'auto', _Opt.duration)
+    }
+  } else if ($plus.requirePlus === false) {
+    console.log('[' + os.name + ']不支持hide方法!')
+    return
+  }
+}
+
+/**
+ * 显示窗体
+ * @public
+ * @function show
+ * @param {string|window|WebviewObject} w - 窗体对象或窗体id
+ * @param {object} [opts] - 显示参数
+ * @param {boolean} [opts.loading=false] - 是否显示loading等待效果
+ * @param {object} [opts.ani] - 显示窗口的动画
+ * @param {string} [opts.ani.aniShow='slide-in-right'] - 显示窗口的动画效果
+ * @param {number} [opts.ani.duration=300] - 显示窗口动画的持续时间
+ * @return {Promise}
+ * @example
+ * // 根据id显示
+ * $plus.win.show('login').then(function(win) {
+ * // success
+ *   console.log('success')
+ * }).catch( function(error) {
+ * // failure
+ *   console.log(error)
+ * })
+ */
+win.show = function(w, opts = { loading: false, ani: {} }) {
+  // export function show(w, opts = {}, showedCB = function () { }) {
+  // if (opts === undefined) {
+  //   opts = { loading: false, ani: {} }
+  // }
+  // if (opts.loading === undefined) {
+  //   opts.loading = false
+  // }
+  // if (opts.ani === undefined) {
+  //   opts.ani = {}
+  // }
+  w = win.get(w)
+  if (!w) {
+    return new Promise(function(resolve, reject) {
+      reject('窗体不存在!')
+    })
+  }
+  if (!opts) {
+    opts = { loading: false, ani: {} }
+  }
+  if (!opts.ani) {
+    opts.ani = {}
+  }
+
+  if (!$api.type.isBoolean(opts.loading)) {
+    opts.loading = false
+  }
+  if (window.plus) {
+    let isVisible = w.isVisible()
+    let _Opt = $api.mix(true, {}, defaultShow, opts.ani)
+
+    // let _ishome = win.isHome(w)
+
+    // let bitmap = new plus.nativeObj.Bitmap(w.id)
+    // w.draw(bitmap, function() {})
+    if (!isVisible) {
+      // 窗口不可见（从没调用过show或hide了）
+      if (opts.loading) {
+        return new Promise(function(resolve) {
+          $plus.ui.showWaiting()
+          setTimeout(function() {
+            // 设置系统状态栏背景颜色
+            w.show(
+              _Opt.aniShow,
+              _Opt.duration,
+              function() {
+                // showedCB()
+                $plus.ui.closeWaiting()
+                resolve(w)
+              }
+              // ,
+              // {
+              //   acceleration: 'capture',
+              //   capture: bitmap
+              // }
+            )
+          }, defaultShow.duration * 1.0)
+        })
+      } else {
+        return new Promise(function(resolve) {
+          setTimeout(function() {
+            // 设置系统状态栏背景颜色
+            w.show(
+              _Opt.aniShow,
+              _Opt.duration,
+              function() {
+                // showedCB()
+                resolve(w)
+              }
+              // ,
+              // {
+              //   acceleration: 'capture',
+              //   capture: bitmap
+              // }
+            )
+          }, defaultShow.duration * 1.0)
+        })
+      }
+    } else {
+      // 窗口可见（调用过show方法，即使被其它窗口挡住了也认为已显示）
+      return new Promise(function(resolve) {
+        setTimeout(function() {
+          // 设置系统状态栏背景颜色
+          w.show(
+            _Opt.aniShow,
+            _Opt.duration,
+            function() {
+              // showedCB()
+              resolve(w)
+            }
+            // ,
+            // {
+            //   acceleration: 'capture',
+            //   capture: bitmap
+            // }
+          )
+        }, defaultHide.duration * 1.0)
+      })
+      // let topView = win.getTop()
+      // let _wIsTop = topView.id === w.id
+      // // 最顶层的是否home页
+      // let _topIsHome = win.isHome(topView)
+      // if (!_wIsTop) {
+      //   // 窗口可见但不在最顶层
+      //   if (_topIsHome) {
+      //     // 最顶层的是home页
+      //     win.hide(w, { aniHide: 'none', duration: 0 })
+      //     if (opts.loading) {
+      //       return new Promise(resolve => {
+      //         $plus.ui.showWaiting()
+      //         setTimeout(() => {
+      //           // 设置系统状态栏背景颜色
+      //           w.show(_Opt.aniShow, _Opt.duration, function() {
+      //             // showedCB()
+      //             $plus.ui.closeWaiting()
+      //             resolve(w)
+      //           })
+      //         }, defaultHide.duration)
+      //       })
+      //     } else {
+      //       return new Promise(resolve => {
+      //         setTimeout(() => {
+      //           // 设置系统状态栏背景颜色
+      //           w.show(_Opt.aniShow, _Opt.duration, function() {
+      //             // showedCB()
+      //             resolve(w)
+      //           })
+      //         }, defaultHide.duration)
+      //       })
+      //     }
+      //   } else {
+      //     // 最顶层的不是home页并且w也不是是home页面
+      //     return new Promise(resolve => {
+      //       w.show(_Opt.aniShow, _Opt.duration, function() {
+      //         setTimeout(() => {
+      //           resolve(w)
+      //         }, defaultHide.duration)
+      //         // resolve(w)
+      //       })
+      //     })
+
+      //     // return new Promise(resolve => {
+
+      //     // w.showBehind(topView)
+      //     // if (opts.loading) {
+      //     //   $plus.ui.showWaiting()
+      //     //   win.hide(topView)
+      //     //   setTimeout(() => {
+      //     //     // showedCB()
+      //     //     $plus.ui.closeWaiting()
+      //     //     resolve(w)
+      //     //   }, defaultHide.duration)
+      //     // } else {
+      //     //   win.hide(topView)
+      //     //   setTimeout(() => {
+      //     //     resolve(w)
+      //     //   }, defaultHide.duration)
+      //     // }
+      //     // })
+      //   }
+      // } else {
+      //   // alert('顶层 可见')
+      //   return new Promise(resolve => {
+      //     resolve(w)
+      //   })
+      // }
+    }
+  } else if ($plus.requirePlus === false) {
+    return new Promise(function(resolve) {
+      w.focus()
+      resolve(w)
+    })
+    // console.log('[' + os.name + ']不支持show方法!')
+  } else {
+    return new Promise(function(resolve, reject) {
+      reject('')
+    })
+  }
+}
+
+/**
+ * 关闭窗体,注意：如果不能直接关闭主页
+ * @public
+ * @function close
+ * @param {string|window|WebviewObject} w - 窗体对象或窗体id
+ * @param {*} [closeOpts] - 关闭参数
+ * @param {string} [closeOpts.aniHide='none'|'auto'] - 关闭窗口的动画效果,非显示栈顶的窗口的默认值为'none'
+ * @param {number} [closeOpts.duration=300] - 关闭窗口动画的持续时间
+ * @example
+ * // 根据id关闭
+ * $plus.win.close('login')
+ */
+win.close = function(w, closeOpts = {}) {
+  // if (closeOpts === undefined) {
+  //   closeOpts = {}
+  // }
+  w = win.get(w)
+  if (!w) {
+    console.error('[close方法] 类型{String|window|WebviewObject}参数w不能为空!')
+    return
+  }
+  if (win.isHome(w)) {
+    return
+  }
+  if (window.plus) {
+    let _cs = w.children(),
+      fn = function() {
+        for (let c of _cs) {
+          win.close(c)
+        }
+      }
+    w.addEventListener('onclose', fn)
+    let _Opt = { duration: defaultHide.duration }
+    if (closeOpts.duration || closeOpts.aniHide) {
+      _Opt = $api.mix(true, {}, defaultHide, closeOpts)
+    }
+
+    if (!win.isTop(w)) {
+      w.close('none', _Opt.duration)
+    } else {
+      w.close(_Opt.aniHide || 'auto', _Opt.duration)
+    }
+  } else if ($plus.requirePlus === false) {
+    w.close()
+  }
+}
+
+/**
+ * 创建并打开新窗口
+ * @public
+ * @function open
+ * @param {string} url - 新窗口加载的HTML页面地址
+ * @param {string} [id] - 新窗口的标识
+ * @param {object} [opts] - 参数
+ * @param {boolean} [opts.loading=false] - 是否显示loading等待效果
+ * @param {object} [opts.ani] - 显示窗口的动画
+ * @param {string} [opts.ani.aniShow='slide-in-right'] - 显示窗口的动画效果
+ * @param {number} [opts.ani.duration=300] - 显示窗口动画的持续时间
+ * @param {JSON} [opts.ext] - 创建窗口的额外扩展参数，设置扩展参数后可以直接通过窗口对象的点（“.”）操作符获取扩展参数属性值。
+ * @param {object} [opts.style] - 创建窗口的样式（如窗口宽、高、位置等信息），参考[HTML5+ API]{@link http://html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyles}。
+ * @return {Promise}
+ * @example
+ * $plus.win.open('login.html', "login", {
+ *   ext: {
+ *     uid: 121
+ *   }
+ * }).then(function(win) {
+ *   // success
+ * console.log('success')
+ * }).catch( function(error) {
+ *   // failure
+ * console.log(error)
+ * })
+ */
+win.open = function(
+  url = '',
+  id = '',
+  opts = { loading: false, ext: {}, ani: {}, style: {} }
+) {
+  // if (url === undefined) {
+  //   url = ''
+  // }
+  // if (id === undefined) {
+  //   id = ''
+  // }
+  // if (opts === undefined) {
+  //   opts = { loading: false, ext: {}, ani: {}, style: {} }
+  // }
+  // if (opts.loading === undefined) {
+  //   opts.loading = false
+  // }
+  // if (opts.ext === undefined) {
+  //   opts.ext = {}
+  // }
+  // if (opts.ani === undefined) {
+  //   opts.ani = {}
+  // }
+  // if (opts.style === undefined) {
+  //   opts.style = {}
+  // }
+  if (!url) {
+    return new Promise(function(resolve, reject) {
+      reject('无页面地址')
+    })
+  }
+  if (window.plus) {
+    if (!id) {
+      id = getId(url, opts.ext)
+    }
+    let view = plus.webview.getWebviewById(id)
+    if (!view) {
+      // 不存在
+      view = win.create(url, id, { ext: opts.ext, style: opts.style })
+    } else {
+      view.setStyle(opts.style)
+    }
+    return win.show(view, { loading: opts.loading, ani: opts.ani })
+  } else if ($plus.requirePlus === false) {
+    // web，非web
+    let _opt = getUrl(url, opts.ext, id)
+    url = _opt.url
+    id = _opt.id
+    let views = []
+    for (let _i of mainWin.__all_wins) {
+      views.push(_i)
+    }
+    let view = views.find(function(item, index, arr) {
+      return item._id === id
+    })
+    if (!view) {
+      return new Promise(function(resolve) {
+        view = window.open(url, '_blank')
+        resolve(view)
+      })
+    } else {
+      return win.show(view)
+    }
+  } else {
+    return new Promise(function(resolve, reject) {
+      reject('')
+    })
+  }
+}
+
+/**
+ * 用浏览器打开url
+ * @public
+ * @function openBrowser
+ * @param {String} url - 页面地址
+ * @example
+ * $plus.win.openBrowser('http://www.baidu.com')
+ */
+win.openBrowser = function(url) {
+  if (window.plus) {
+    window.plus.runtime.openURL(encodeURI(url))
+  } else if ($plus.requirePlus === false) {
+    win.open(url)
+  }
+}
+/**
+ * 创建并打开侧滑窗口
+ * @public
+ * @function menu
+ * @param {string} url - 新窗口加载的HTML页面地址
+ * @param {string} [id] - 新窗口的标识
+ * @param {object} [opts] - 参数
+ * @param {boolean} [opts.loading=false] - 是否显示loading等待效果
+ * @param {object} [opts.ani] - 显示窗口的动画
+ * @param {string} [opts.ani.aniShow='slide-in-right'] - 显示窗口的动画效果
+ * @param {number} [opts.ani.duration=300] - 显示窗口动画的持续时间
+ * @param {JSON} [opts.ext] - 创建窗口的额外扩展参数，设置扩展参数后可以直接通过窗口对象的点（“.”）操作符获取扩展参数属性值。
+ * @param {object} [opts.style] - 创建窗口的样式（如窗口宽、高、位置等信息），参考{@link http://html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyles HTML5+ API}。
+ * @return {Promise}
+ * @example &lt;caption>左侧滑菜单&lt;/caption>
+ * $plus.win.menu('index.html', "menuLeft", {
+ *   ani: { aniShow: "slide-in-left" },
+ *   style: {
+ *     right: "30%",
+ *     width: "70%",
+ *     popGesture: "none"
+ *   }
+ * }).then(function(value) {
+ *   // success
+ * console.log('success')
+ * }).catch( function(error) {
+ *   // failure
+ * console.log(error)
+ * })
+ * @example &lt;caption>右侧滑菜单&lt;/caption>
+ * $plus.win.menu('index.html', "menuRight", {
+ *   ani: { aniShow: "slide-in-right" },
+ *   style: {
+ *     left: "30%",
+ *     width: "70%",
+ *     popGesture: "none"
+ *   }
+ * }).then(function(value) {
+ *   // success
+ * console.log('success')
+ * }).catch( function(error) {
+ *   // failure
+ * console.log(error)
+ * })
+ * @example &lt;caption>底侧滑菜单&lt;/caption>
+ * $plus.win.menu('index.html', "menuBottom", {
+ *   ani: { aniShow: "slide-in-bottom" },
+ *   style: {
+ *     height: "30%",
+ *     top: "70%",
+ *     popGesture: "none"
+ *   }
+ * }).then(function(value) {
+ *   // success
+ * console.log('success')
+ * }).catch( function(error) {
+ *   // failure
+ * console.log(error)
+ * })
+ * @example &lt;caption>顶侧滑菜单&lt;/caption>
+ * $plus.win.menu('index.html', "menuTop", {
+ *   ani: { aniShow: "slide-in-top" },
+ *   style: {
+ *     height: "30%",
+ *     bottom: "70%",
+ *     popGesture: "none"
+ *   }
+ * }).then(function(win) {
+ *   // success
+ * console.log('success')
+ * }).catch( function(error) {
+ *   // failure
+ * console.log(error)
+ * })
+ */
+win.menu = function(
+  url = '',
+  id = '',
+  opts = { loading: false, ext: {}, ani: {}, style: {} }
+) {
+  // if (url === undefined) {
+  //   url = ''
+  // }
+  // if (id === undefined) {
+  //   id = ''
+  // }
+  // if (opts === undefined) {
+  //   opts = { loading: false, ext: {}, ani: {}, style: {} }
+  // }
+  // if (opts.loading === undefined) {
+  //   opts.loading = false
+  // }
+  // if (opts.ext === undefined) {
+  //   opts.ext = {}
+  // }
+  // if (opts.ani === undefined) {
+  //   opts.ani = {}
+  // }
+  // if (opts.style === undefined) {
+  //   opts.style = {}
+  // }
+
+  if (window.plus) {
+    let w = win.get()
+    w.setStyle({ mask: 'rgba(0,0,0,0.5)' })
+    return win
+      .open(url, id, opts)
+      .then(function(_w) {
+        _w.addEventListener(
+          'close',
+          function() {
+            w.setStyle({ mask: 'none' })
+            _w = null
+          },
+          false
+        )
+        _w.addEventListener(
+          'hide',
+          function() {
+            w.setStyle({ mask: 'none' })
+          },
+          false
+        )
+        return new Promise(function(resolve, reject) {
+          resolve(_w)
+        })
+      })
+      .catch(function(err) {
+        return new Promise(function(resolve, reject) {
+          reject(err)
+        })
+      })
+  } else {
+    return new Promise(function(resolve, reject) {
+      reject('')
+    })
+  }
+}
+// #endregion
+
+if (!window.$plus.win) {
+  Object.defineProperty(window.$plus, 'win', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return win
+    }
+  })
+}
+
+// #region $plus 公共方法
+
+/**
+ * 设置自定义错误页面
+ * @memberof $plus
+ * @param {String} url - 错误页面路径，必须是本地路径（Hbuilder的）
+ * @example &lt;caption>设置错误页&lt;/caption>
+ * // 路径，必须是本地路径（Hbuilder项目的）
+ * $plus.errorPage('/error.html')
+ */
+function errorPage(url) {
+  defaultWin.errorPage = url
+  if (window.plus) {
+    win.get().setStyle({ errorPage: url })
+  }
+}
+if (!window.$plus.errorPage) {
+  Object.defineProperty(window.$plus, 'errorPage', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return errorPage
+    }
+  })
+}
+
+/**
+ * 设置 默认窗口样式
+ * @memberof $plus
+ * @param {Object} styles - 窗口样式
+ * @example &lt;caption>设置默认窗口样式&lt;/caption>
+ * $plus.winStyle({
+ *   background: 'transparent'
+ * })
+ */
+function winStyle(styles) {
+  $api.mix(true, defaultWin, styles)
+}
+
+if (!window.$plus.winStyle) {
+  Object.defineProperty(window.$plus, 'winStyle', {
+    configurable: false,
+    enumerable: false,
+    Writable: false,
+    get: function() {
+      return winStyle
+    }
+  })
+}
+
+// #endregion
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 10:16:03 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
