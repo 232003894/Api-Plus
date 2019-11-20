@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>@h5plus 模块: msg</title>
+	<title>@h5plus 模块: css</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
 		<div id="main">
 			﻿
 
-	<h1 class="page-title">模块: msg</h1>
+	<h1 class="page-title">模块: css</h1>
 <section>
 
 <header>
@@ -84,7 +84,7 @@
     <div class="container-overview">
     
         
-            <div class="description"><p><b>窗体间的消息通知</b></p></div>
+            <div class="description"><p>dom class styel 处理</p></div>
         
 
         
@@ -149,7 +149,7 @@
         <dl>
             ﻿
 <dt>
-    <h4 class="name" id="~send">send(name [, data] [, opts])</h4>
+    <h4 class="name" id="~addClass">addClass(el, cls)</h4>
     
     
 </dt>
@@ -157,7 +157,7 @@
 
     
     <div class="description">
-        <p>广播通知</p>
+        <p>增加对象的class</p>
     </div>
     
 
@@ -180,8 +180,6 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
 
@@ -194,7 +192,31 @@
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cls</code></td>
             
 
             <td class="type">
@@ -208,196 +230,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>事件名称</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>data</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;可选><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>事件数据</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>opts</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;可选><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>需要通知的窗体参数</p>
-                <h6 class="method-params-label method-subparams-label">Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>self</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">bollean</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;可选><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>是否通知自己<br>false:不通知自己</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>ids</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;可选><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    []
-                
-                </td>
-            
-
-            <td class="description last"><p>指定通知的窗体id集合<br>[]:通知所有窗体</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
+            <td class="description last"><p>className</p></td>
         </tr>
 
     
@@ -462,9 +298,687 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-        <p class="code-caption">广播通知已登录（包括本窗体）.</p>
+    <pre class="sunlight-highlight-javascript">$api.css.addClass(document, &#x27;black&#x27;)})</pre>
+
+
     
-    <pre class="sunlight-highlight-javascript">$plus.msg.send(&quot;logined&quot;, { uid: 1 }, { self: true });</pre>
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~getStyle">getStyle(el, styleName)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取对象的指定样式的值</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>styleName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>styleName</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.css.getStyle(document, &#x27;font-size&#x27;)})</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~hasClass">hasClass(element, event, fn)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>取消dom对象的事件监听</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.event.off(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~removeClass">removeClass(el, cls)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>删除对象的class</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cls</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>className</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.css.removeClass(document, &#x27;black&#x27;)})</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~setStyle">setStyle(el, styleName, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>设置对象的指定样式的值</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>styleName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>styleName</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>style value</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.css.setStyle(document, &#x27;font-size&#x27;, &#x27;14px&#x27;)})</pre>
 
 
     
