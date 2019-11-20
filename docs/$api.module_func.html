@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>@h5plus 命名空间: $api</title>
+	<title>@h5plus 模块: func</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,15 +72,10 @@
 		<div id="main">
 			﻿
 
-	<h1 class="page-title">命名空间: $api</h1>
+	<h1 class="page-title">模块: func</h1>
 <section>
 
 <header>
-    
-        <h2>
-        $api
-        </h2>
-        
     
 </header>
 
@@ -89,118 +84,10 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>常用api，全局的对象：window.$api<br>
-包含：类型处理、数学计算、金额处理、字符串和验证、颜色库、深度拷贝、运行环境、查询字符串、存储、图像处理</p></div>
+            <div class="description"><p>常用的函数处理方法</p></div>
         
 
         
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
-	<dd class="tag-see">
-		<ul>
-			<li><p><a href="$api.module_type.html"><code>类型处理：type模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_math.html"><code>数学计算：math模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_money.html"><code>金额处理：money模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_string.html"><code>字符串和验证：string模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_color.html"><code>颜色库：color模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_os.html"><code>运行环境：os对象</code></a></p></li>
-			
-			<li><p><a href="$api.module_qs.html"><code>查询字符串：qs模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_storage.html"><code>简单存储：storage模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_img.html"><code>图像处理：img模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_linq.html"><code>查询：linq模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_func.html"><code>函数处理：func模块</code></a></p></li>
-			
-			<li><p><a href="$api.module_clip.html"><code>复制功能：clip模块</code></a></p></li>
-			
-			<li><p><code>样式功能：css模块</code></p></li>
-			
-			<li><p><a href="$api.module_event.html"><code>事件监听：event模块</code></a></p></li>
-			</ul>
-	</dd>
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <!-- <h3 class="subsection-title">Members</h3> -->
-
-        <dl>
-            
-<hr>
-<dt class="name" id=".ready">
-    <h4 id=".ready">ready<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Dom加载完成，相当于window.onload</p>
-    </div>
-    
-
-    
-
-    
 <dl class="details">
     
 
@@ -240,18 +127,20 @@
 </dl>
 
 
-    
-        <h5>Example</h5>
         
-        <p class="code-caption">Dom加载完成</p>
     
-    <pre class="sunlight-highlight-javascript">$api.ready(function(){  console.log(&#x27;Dom 加载完成&#x27;)})</pre>
-
+    </div>
 
     
-</dd>
 
-        </dl>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -260,7 +149,7 @@
         <dl>
             ﻿
 <dt>
-    <h4 class="name" id=".mix">mix( [deep], target, objects)</h4>
+    <h4 class="name" id="~debounce">debounce(func, wait, immediate)</h4>
     
     
 </dt>
@@ -268,7 +157,8 @@
 
     
     <div class="description">
-        <p>深度对象拷贝</p>
+        <p>防抖函数，简单来说就是防止抖动。<br/><br>
+当调用动作触发一段时间后，才会执行该动作，若在这段时间间隔内又调用此动作则将重新计算时间间隔。</p>
     </div>
     
 
@@ -291,11 +181,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -307,7 +193,55 @@
 
         <tr>
             
-                <td class="name"><code>deep</code></td>
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的函数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wait</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>时间间隔</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>immediate</code></td>
             
 
             <td class="type">
@@ -321,100 +255,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;可选><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
 
-            <td class="description last"><p>是否深度拷贝</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>target</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>对象扩展。这将接收新的属性。</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>objects</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>一个或多个对象，合并到target</p></td>
+            <td class="description last"><p>是否立即执行</p></td>
         </tr>
 
     
@@ -478,7 +322,7 @@
     
             
 <div class="param-desc">
-    <p>返回 target</p>
+    <p>返回调用函数</p>
 </div>
 
 
@@ -489,7 +333,7 @@
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">function</span>
 
 
 
@@ -503,7 +347,556 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">// 多个对象拷贝// {&quot;title&quot;:&quot;sss&quot;,&quot;obj&quot;:{&quot;sub&quot;:&quot;abc&quot;,&quot;test&quot;:&quot;sub123&quot;}}$api.mix( {   title:&#x27;dd&#x27;,   obj:{sub:&#x27;abc&#x27;,subtitle:&#x27;sub&#x27;} }, {   title:&#x27;sss&#x27;,   obj:{sub:&#x27;abc&#x27;,test:&#x27;sub123&#x27;} })// 多个对象深度拷贝// {&quot;title&quot;:&quot;sss&quot;,&quot;obj&quot;:{&quot;sub&quot;:&quot;abc&quot;,&quot;subtitle&quot;:&quot;sub&quot;,&quot;test&quot;:&quot;sub123&quot;}}$api.mix( true, {   title:&#x27;dd&#x27;,   id:123,   obj:{sub:&#x27;abc&#x27;,subtitle:&#x27;sub&#x27;} }, {   title:&#x27;sss&#x27;,   id1:123,   obj:{sub:&#x27;abc&#x27;,test:&#x27;sub123&#x27;}})// 多个数组拷贝// [4,{&quot;sub&quot;:&quot;abc&quot;,&quot;test&quot;:&quot;sub123&quot;},3,5]$api.mix( [1,{sub:&#x27;abc&#x27;,subtitle:&#x27;sub&#x27;},2,5], [4,{sub:&#x27;abc&#x27;,test:&#x27;sub123&#x27;},3])// 多个数组深度拷贝// [4,{&quot;sub&quot;:&quot;abc&quot;,&quot;subtitle&quot;:&quot;sub&quot;,&quot;test&quot;:&quot;sub123&quot;},3,5]$api.mix( true, [1,{sub:&#x27;abc&#x27;,subtitle:&#x27;sub&#x27;},2,5], [4,{sub:&#x27;abc&#x27;,test:&#x27;sub123&#x27;},3])// 对象拷贝到数组中,合并后既是数组也是对象var a= [1,1,2], b={title:&#x27;dd&#x27;,id:123}$api.mix(a,b)JSON.stringify(a)  // &quot;[1,1,2]&quot;console.log(a)     // (3) [1, 1, 2, title: &quot;dd&quot;, id: 123]a.title            // &quot;dd&quot;a.id               // 123// 数组拷贝到对象中,合并后还是对象// {&quot;0&quot;:1,&quot;1&quot;:1,&quot;2&quot;:2,&quot;title&quot;:&quot;dd&quot;,&quot;id&quot;:123}$api.mix({title:&#x27;dd&#x27;,id:123},[1,1,2])</pre>
+    <pre class="sunlight-highlight-javascript">window.onresize = $api.func.debounce(function(event) {  console.log(&#x27;onresize&#x27;)}，300)</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~rafThrottle">rafThrottle(fn)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>简易的节流，使用requestAnimationFrame定时。<br/><br>
+一个连续操作中的处理，按照阀值时间间隔进行触发，从而实现节流。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的函数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回调用函数</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">window.onscroll = $api.func.rafThrottle(function(event) {  console.log(&#x27;onscroll&#x27;)})</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~throttle">throttle(func, wait, options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>节流函数，当持续触发事件时，保证隔间时间触发一次事件。<br/><br>
+频率控制函数， func执行次数不超过 1 次/wait <br/><br>
+预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新的时间周期。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的函数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wait</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>时间间隔</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">objecr</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>如果想忽略开始边界上的调用则传入 {leading:false}，<br/>如果想忽略结束边界上的调用则传入 {trailing:false}。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>返回调用函数</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">window.onscroll = $api.func.throttle(function(event) {  console.log(&#x27;100ms&#x27;)}, 100 ,{leading:false})</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~until">until(milliseconds, check)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>一直定时执行，直到检查条件通过。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>milliseconds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>毫秒数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>check</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>检查条件的方法</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Promise</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.func.timerUntil(3000, () =&gt; !this.loading).then(() =&gt; {  console.log(&#x27;loading finished&#x27;)})</pre>
 
 
     

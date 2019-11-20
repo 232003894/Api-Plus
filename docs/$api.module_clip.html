@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>@h5plus 模块: math</title>
+	<title>@h5plus 模块: clip</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
 		<div id="main">
 			﻿
 
-	<h1 class="page-title">模块: math</h1>
+	<h1 class="page-title">模块: clip</h1>
 <section>
 
 <header>
@@ -84,89 +84,7 @@
     <div class="container-overview">
     
         
-            <div class="description"><p><b>一种用于JavaScript的任意精度的十进制类型，</b>引用自<a href="https://github.com/MikeMcl/decimal.js">decimal.js</a>，有关进一步的信息，请参见 <a href="./_docs/decimal.js.html" target='_blank'>API引用</a><br/></p>
-<h3>构造</h3>
-<pre class="prettyprint source lang-js"><code>var x = new $api.math(123.4567)
-var y = new $api.math('123456.7e-3')
-x.equals(y) && y.equals(z) && x.equals(z)        // true
-</code></pre>
-<h3>二进制，八进制，十六进制</h3>
-<pre class="prettyprint source lang-js"><code>// 使用二进制，八进制，十六进制
-var x = new $api.math('0xff.f')            // '255.9375'
-var y = new $api.math('0b10101100')        // '172'
-var z = x.plus(y)                          // '427.9375'
-
-z.toBinary()                               // '0b110101011.1111'
-z.toBinary(13)                             // '0b1.101010111111p+8'
-
-// 用二进制指数记数法创建一个十进制数
-var x = new $api.math('0b1.1111111111111111111111111111111111111111111111111111p+1023')
-</code></pre>
-<h3>实例化的值是不会变的</h3>
-<pre class="prettyprint source lang-js"><code>0.3 - 0.1                     // 0.19999999999999998
-// 使用它的方法后，math实例化的值是不会变的
-var x = new $api.math(0.3)
-x.minus(0.1)                  // '0.2'
-x                             // '0.3'
-</code></pre>
-<h3>链式调用</h3>
-<pre class="prettyprint source lang-js"><code>x.dividedBy(y).plus(z).times(9).floor()
-x.times('1.23456780123456789e+9').plus(9876.5432321).dividedBy('4444562598.111772').ceil()
-</code></pre>
-<h3>短名称</h3>
-<pre class="prettyprint source lang-js"><code>// 很多方法有短名称
-x = new $api.math(16)
-x.squareRoot()                           // '4'
-y = new $api.math(3)
-y.sqrt()                                 // '1.73205080756887729353'
-y.sqrt().eq( y.pow(0.5) )                // true
-</code></pre>
-<h3>toExponential, toFixed and toPrecision</h3>
-<pre class="prettyprint source lang-js"><code>// 和 JavaScript's Number 类型一样，有 toExponential, toFixed and toPrecision 方法
-x = new $api.math(255.5)
-x.toExponential(5)              // '2.55500e+2'
-x.toFixed(5)                    // '255.50000'
-x.toPrecision(5)                // '255.50'
-</code></pre>
-<h3>JavaScript's math 对象的方法</h3>
-<pre class="prettyprint source lang-js"><code>// 几乎所有的 JavaScript's math 对象的方法，这里都有
-$api.math.sqrt('6.98372465832e+9823')      // '8.3568682281821340204e+4911'
-$api.math.pow(2, 0.0979843)                // '1.0702770511687781839'
-</code></pre>
-<h3>NaN 和 Infinity 是有效的 $api.Math值，</h3>
-<pre class="prettyprint source lang-js"><code>// 有isNaN 和 isFinite方法
-x = new $api.math(NaN)                                           // 'NaN'
-y = new $api.math(Infinity)                                      // 'Infinity'
-
-// NaN 和 Infinity 是有效的 $api.Math值
-x.isNaN() && !y.isNaN() && !x.isFinite() && !y.isFinite()        // true
-</code></pre>
-<h3>toFraction 具有可选的最大分母参数</h3>
-<pre class="prettyprint source lang-js"><code>// toFraction 具有可选的最大分母参数
-z = new $api.math(355)
-pi = z.dividedBy(113)        // '3.1415929204'
-pi.toFraction()              // [ '7853982301', '2500000000' ]
-pi.toFraction(1000)          // [ '355', '113' ]
-</code></pre>
-<h3>精度和舍入</h3>
-<pre class="prettyprint source lang-js"><code>// 根据精确数字和舍入属性指定的有效数字和舍入模式，所有计算均舍入。
-// 对于高级用法，可以创建多个构造函数，每个构造函数都有自己独立的配置，适用于从它创建的所有十进制数
-// 设置构造函数默认的精度和舍入
-$api.math.set({ precision: 5, rounding: 4 })
-// 创建另一个构造函数，可选地在配置对象中传递
-Math9 = $api.math.clone({ precision: 9, rounding: 1 })
-x = new $api.math(5)
-y = new Math9(5)
-x.div(3)                           // '1.6667'
-y.div(3)                           // '1.66666666'
-</code></pre>
-<h3>$api.math 的值有 digits、exponent 和 sign。</h3>
-<pre class="prettyprint source lang-js"><code>// $api.math 的值以浮点格式存储，并有 digits、exponent 和 sign。
-x = new $api.math(-12345.67)
-x.d                            // [ 12345, 6700000 ]    digits (base 10000000)
-x.e                            // 4                     exponent (base 10)
-x.s                            // -1                    sign
-</code></pre></div>
+            <div class="description"><p><b>剪切板</b></p></div>
         
 
         
@@ -225,6 +143,202 @@ x.s                            // -1                    sign
 
     
 
+    
+        <!-- <h3 class="subsection-title">方法</h3> -->
+
+        <dl>
+            ﻿
+<dt>
+    <h4 class="name" id="~copy">copy(txt, event)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>复制</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    ''
+                
+                </td>
+            
+
+            <td class="description last"><p>复制的字符串</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">event</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.clip.copy(&quot;复制的字符串&quot;, event).then((e) =&gt; {
+  this.$toast.success(&#x27;复制成功&#x27;)
+})</pre>
+
+
+    
+</dd>
+
+        </dl>
     
 
     

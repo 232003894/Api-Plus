@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>@h5plus 模块: type</title>
+	<title>@h5plus 模块: event</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
 		<div id="main">
 			﻿
 
-	<h1 class="page-title">模块: type</h1>
+	<h1 class="page-title">模块: event</h1>
 <section>
 
 <header>
@@ -84,7 +84,7 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>获取对象的类型（boolean，number，string，function，array，date，regexp，object，error，NaN，undefined，null）</p></div>
+            <div class="description"><p>dom class styel 处理</p></div>
         
 
         
@@ -125,12 +125,6 @@
 
 	
 </dl>
-
-
-        
-            <h3>Example</h3>
-            
-    <pre class="sunlight-highlight-javascript">// 类型为：&quot;string&quot;$api.type(&#x27;abc&#x27;)</pre>
 
 
         
@@ -155,7 +149,7 @@
         <dl>
             ﻿
 <dt>
-    <h4 class="name" id="~add">add(name, object)</h4>
+    <h4 class="name" id="~addClass">addClass(el, cls)</h4>
     
     
 </dt>
@@ -163,7 +157,7 @@
 
     
     <div class="description">
-        <p>新增类型</p>
+        <p>增加对象的class</p>
     </div>
     
 
@@ -198,7 +192,31 @@
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cls</code></td>
             
 
             <td class="type">
@@ -215,31 +233,7 @@
 
             
 
-            <td class="description last"><p>类型名称</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>object</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>需要注册类型的对象</p></td>
+            <td class="description last"><p>className</p></td>
         </tr>
 
     
@@ -304,12 +298,7 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">class People {
-     constructor() {
-     // Register the object type.
-     $api.type.add(&#x27;People&#x27;, this);
-   }
-}</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.addClass(document, &#x27;black&#x27;)})</pre>
 
 
     
@@ -318,7 +307,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isArray">isArray(value)</h4>
+    <h4 class="name" id="~getStyle">getStyle(el, styleName)</h4>
     
     
 </dt>
@@ -326,7 +315,7 @@
 
     
     <div class="description">
-        <p>判定是否为数组</p>
+        <p>获取对象的指定样式的值</p>
     </div>
     
 
@@ -361,7 +350,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -378,7 +367,31 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>styleName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>styleName</p></td>
         </tr>
 
     
@@ -438,36 +451,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为数组</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isArray([])</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.getStyle(document, &#x27;font-size&#x27;)})</pre>
 
 
     
@@ -476,7 +465,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isBoolean">isBoolean(value)</h4>
+    <h4 class="name" id="~hasClass">hasClass(element, event, fn)</h4>
     
     
 </dt>
@@ -484,7 +473,7 @@
 
     
     <div class="description">
-        <p>判定是否为布尔</p>
+        <p>取消dom对象的事件监听</p>
     </div>
     
 
@@ -519,7 +508,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -536,7 +525,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -596,36 +633,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为布尔</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isBoolean(&#x27;1&#x27;===&#x27;2&#x27;)</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.off(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -634,7 +647,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isDate">isDate(value)</h4>
+    <h4 class="name" id="~off">off(element, event, fn)</h4>
     
     
 </dt>
@@ -642,7 +655,7 @@
 
     
     <div class="description">
-        <p>判定是否为日期</p>
+        <p>取消dom对象的事件监听</p>
     </div>
     
 
@@ -677,7 +690,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -694,7 +707,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -754,36 +815,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为日期</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isDate(new Date())</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.off(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -792,7 +829,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isError">isError(value)</h4>
+    <h4 class="name" id="~on">on(element, event, fn)</h4>
     
     
 </dt>
@@ -800,7 +837,7 @@
 
     
     <div class="description">
-        <p>判定是否为错误</p>
+        <p>添加dom对象的事件监听</p>
     </div>
     
 
@@ -835,7 +872,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -852,7 +889,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -912,36 +997,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为错误</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isError(new Error())</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.on(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -950,7 +1011,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isFunction">isFunction(value)</h4>
+    <h4 class="name" id="~once">once(element, event, fn)</h4>
     
     
 </dt>
@@ -958,7 +1019,7 @@
 
     
     <div class="description">
-        <p>判定是否为一个函数</p>
+        <p>只执行一次的事件监听</p>
     </div>
     
 
@@ -993,7 +1054,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -1010,7 +1071,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -1070,36 +1179,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为一个函数</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isFunction(function(){})</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.once(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -1108,7 +1193,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isNaN">isNaN(value)</h4>
+    <h4 class="name" id="~removeClass">removeClass(el, cls)</h4>
     
     
 </dt>
@@ -1116,7 +1201,7 @@
 
     
     <div class="description">
-        <p>判定是否为NaN</p>
+        <p>删除对象的class</p>
     </div>
     
 
@@ -1151,7 +1236,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -1168,7 +1253,31 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cls</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>className</p></td>
         </tr>
 
     
@@ -1228,36 +1337,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为NaN</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isNaN(Number.NaN)</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.removeClass(document, &#x27;black&#x27;)})</pre>
 
 
     
@@ -1266,7 +1351,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isNull">isNull(value)</h4>
+    <h4 class="name" id="~setStyle">setStyle(el, styleName, value)</h4>
     
     
 </dt>
@@ -1274,7 +1359,7 @@
 
     
     <div class="description">
-        <p>判定是否为null</p>
+        <p>设置对象的指定样式的值</p>
     </div>
     
 
@@ -1309,7 +1394,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -1326,7 +1411,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>styleName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>styleName</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>style value</p></td>
         </tr>
 
     
@@ -1386,45 +1519,108 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为null</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isNull(null)</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.setStyle(document, &#x27;font-size&#x27;, &#x27;14px&#x27;)})</pre>
 
 
     
 </dd>
 
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+	<h1 class="page-title">模块: event</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
         
+            <div class="description"><p>事件监听、取消监听等</p></div>
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <!-- <h3 class="subsection-title">方法</h3> -->
+
+        <dl>
             ﻿
 <dt>
-    <h4 class="name" id="~isNumber">isNumber(value)</h4>
+    <h4 class="name" id="~addClass">addClass(el, cls)</h4>
     
     
 </dt>
@@ -1432,7 +1628,7 @@
 
     
     <div class="description">
-        <p>判定是否为数值</p>
+        <p>增加对象的class</p>
     </div>
     
 
@@ -1467,7 +1663,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -1484,7 +1680,31 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cls</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>className</p></td>
         </tr>
 
     
@@ -1544,36 +1764,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为数值</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isNumber(123)</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.addClass(document, &#x27;black&#x27;)})</pre>
 
 
     
@@ -1582,7 +1778,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isObject">isObject(value)</h4>
+    <h4 class="name" id="~getStyle">getStyle(el, styleName)</h4>
     
     
 </dt>
@@ -1590,7 +1786,7 @@
 
     
     <div class="description">
-        <p>判定是否为一个对象</p>
+        <p>获取对象的指定样式的值</p>
     </div>
     
 
@@ -1625,7 +1821,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -1642,7 +1838,31 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>styleName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>styleName</p></td>
         </tr>
 
     
@@ -1702,36 +1922,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为一个对象</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isObject({})</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.getStyle(document, &#x27;font-size&#x27;)})</pre>
 
 
     
@@ -1740,7 +1936,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isPlainObject">isPlainObject(value)</h4>
+    <h4 class="name" id="~hasClass">hasClass(element, event, fn)</h4>
     
     
 </dt>
@@ -1748,7 +1944,7 @@
 
     
     <div class="description">
-        <p>判定是否为一个纯净的JS对象,指由Object构造器生成的对象,不能为window, 任何类(包括自定义类)的实例,元素节点,文本节点</p>
+        <p>取消dom对象的事件监听</p>
     </div>
     
 
@@ -1783,7 +1979,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -1800,7 +1996,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -1860,36 +2104,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为一个纯净的JS对象</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isPlainObject({})</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.off(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -1898,7 +2118,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isRegExp">isRegExp(value)</h4>
+    <h4 class="name" id="~off">off(element, event, fn)</h4>
     
     
 </dt>
@@ -1906,7 +2126,7 @@
 
     
     <div class="description">
-        <p>判定是否为正则</p>
+        <p>取消dom对象的事件监听</p>
     </div>
     
 
@@ -1941,7 +2161,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -1958,7 +2178,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -2018,36 +2286,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为正则</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isRegExp(new RegExp())</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.off(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -2056,7 +2300,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isString">isString(value)</h4>
+    <h4 class="name" id="~on">on(element, event, fn)</h4>
     
     
 </dt>
@@ -2064,7 +2308,7 @@
 
     
     <div class="description">
-        <p>判定是否为字符串</p>
+        <p>添加dom对象的事件监听</p>
     </div>
     
 
@@ -2099,7 +2343,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -2116,7 +2360,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -2176,36 +2468,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为字符串</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isString(&#x27;abc&#x27;)</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.on(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -2214,7 +2482,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isUndefined">isUndefined(value)</h4>
+    <h4 class="name" id="~once">once(element, event, fn)</h4>
     
     
 </dt>
@@ -2222,7 +2490,7 @@
 
     
     <div class="description">
-        <p>判定是否为undefined</p>
+        <p>只执行一次的事件监听</p>
     </div>
     
 
@@ -2257,7 +2525,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -2274,7 +2542,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>监听方法</p></td>
         </tr>
 
     
@@ -2334,36 +2650,12 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为undefined</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isUndefined()</pre>
+    <pre class="sunlight-highlight-javascript">$api.event.once(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
 
 
     
@@ -2372,7 +2664,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~isWindow">isWindow(value)</h4>
+    <h4 class="name" id="~removeClass">removeClass(el, cls)</h4>
     
     
 </dt>
@@ -2380,7 +2672,7 @@
 
     
     <div class="description">
-        <p>判定是否为一个window对象</p>
+        <p>删除对象的class</p>
     </div>
     
 
@@ -2415,7 +2707,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -2432,7 +2724,31 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cls</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>className</p></td>
         </tr>
 
     
@@ -2492,36 +2808,194 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>是否为一个window对象</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.type.isWindow(window)</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.removeClass(document, &#x27;black&#x27;)})</pre>
+
+
+    
+</dd>
+
+        
+            ﻿
+<dt>
+    <h4 class="name" id="~setStyle">setStyle(el, styleName, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>设置对象的指定样式的值</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dom对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>styleName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>styleName</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>style value</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
+        <!-- <h5>示例</h5> -->
+        
+    <pre class="sunlight-highlight-javascript">$api.css.setStyle(document, &#x27;font-size&#x27;, &#x27;14px&#x27;)})</pre>
 
 
     
