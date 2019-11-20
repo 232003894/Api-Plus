@@ -298,7 +298,7 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.css.addClass(document, &#x27;black&#x27;)})</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.addClass(document, &#x27;black&#x27;)</pre>
 
 
     
@@ -456,7 +456,7 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.css.getStyle(document, &#x27;font-size&#x27;)})</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.getStyle(document, &#x27;font-size&#x27;)</pre>
 
 
     
@@ -465,7 +465,7 @@
         
             ﻿
 <dt>
-    <h4 class="name" id="~hasClass">hasClass(element, event, fn)</h4>
+    <h4 class="name" id="~hasClass">hasClass(el, cls)</h4>
     
     
 </dt>
@@ -473,7 +473,7 @@
 
     
     <div class="description">
-        <p>取消dom对象的事件监听</p>
+        <p>对象是否有某个class</p>
     </div>
     
 
@@ -508,7 +508,7 @@
 
         <tr>
             
-                <td class="name"><code>element</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
@@ -532,7 +532,7 @@
 
         <tr>
             
-                <td class="name"><code>event</code></td>
+                <td class="name"><code>cls</code></td>
             
 
             <td class="type">
@@ -549,31 +549,7 @@
 
             
 
-            <td class="description last"><p>事件名称</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fn</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>监听方法</p></td>
+            <td class="description last"><p>className</p></td>
         </tr>
 
     
@@ -633,12 +609,36 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>是否含有</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.event.off(button, &#x27;click&#x27;, (e) =&gt; {  console.log(&#x27;click&#x27;)})</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.hasClass(document, &#x27;black&#x27;)</pre>
 
 
     
@@ -796,7 +796,7 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.css.removeClass(document, &#x27;black&#x27;)})</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.removeClass(document, &#x27;black&#x27;)</pre>
 
 
     
@@ -978,7 +978,7 @@
         <h5 style="padding-top: 10px;margin-bottom:0;">Example</h5> 
         <!-- <h5>示例</h5> -->
         
-    <pre class="sunlight-highlight-javascript">$api.css.setStyle(document, &#x27;font-size&#x27;, &#x27;14px&#x27;)})</pre>
+    <pre class="sunlight-highlight-javascript">$api.css.setStyle(document, &#x27;font-size&#x27;, &#x27;14px&#x27;)</pre>
 
 
     
