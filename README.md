@@ -82,7 +82,7 @@ export default {
     }
   },
   methods: {
-    // 广播消息
+    // 广播消息 
     send: function() {
       $plus.msg.send('customEvent', { a: 1 }, { self: true })
     }
